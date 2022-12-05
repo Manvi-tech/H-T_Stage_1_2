@@ -31,6 +31,8 @@ header{
     height: auto;
     width: 25%;
     margin: 20px 30px;
+    background-color: aliceblue;
+    padding: 5px;
     /* border: 1px solid black; */
 }
 
