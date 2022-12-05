@@ -1,0 +1,50 @@
+div {
+  background-color: 0;
+}
+div h1 {
+  color: blue;
+}
+
+.p_blue {
+  background-color: blue;
+  color: red;
+}
+
+.p_pink {
+  background-color: pink;
+  color: gray;
+}
+
+h1 {
+  border: 1px solid red;
+}
+
+h2 {
+  border: 1px dotted black;
+}
+
+h3 {
+  border: 1px solid pink;
+}
+
+h4 {
+  border: 1px solid gray;
+}
+
+.li_bold {
+  font-weight: bold;
+}
+
+.li_normal {
+  font-weight: normal;
+}
+
+.li_pink {
+  color: pink;
+}
+
+.li_yellow {
+  color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,46 @@
+div{
+    background-color: red($color: #000000);
+    h1{
+        color: blue;
+    }
+}
+
+//list
+// @each $color in blue, red, pink{
+//     .p_#{$color}{
+//         color: $color;
+//     }
+// }
+
+@each $color,$textColor in (blue, red),( pink, gray) {
+    .p_#{$color}{
+        background-color: $color;
+        color: $textColor;
+        
+    }
+}
+
+// map
+@each $heading, $borders in(
+    h1: 1px solid red,
+    h2: 1px dotted black,
+    h3: 1px solid pink,
+    h4: 1px solid gray
+){
+    #{$heading}{
+        border: $borders;
+    }
+}
+
+
+@each $style in bold,normal{
+    .li_#{$style}{
+        font-weight: $style;
+    }
+}
+
+@each $color in pink, yellow{
+    .li_#{$color}{
+        color: $color;
+    }
+}
