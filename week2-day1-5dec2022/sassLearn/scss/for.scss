@@ -1,0 +1,56 @@
+
+// darken(), lighten(), mix(), @extend, @mixin
+
+
+$col1:lightyellow;
+$col2:pink;
+$col3:lightgreen;
+
+@for $size from 16 through 19{
+    .h#{$size}{
+        width: 40px*$size;
+        padding-left: 2px * $size;
+        padding-top: 2px* $size;
+        font-size: 5px*$size;
+        padding-bottom: 2*$size;
+        border: 1px solid black;
+        background-image: linear-gradient(45deg,$col1, $col2, $col3);
+        color: lighten(black, 3% * $size);
+
+    }
+}
+
+
+@mixin colorMix{
+    color: purple;
+    background-color: $col3;
+}
+
+@mixin dynamic($h, $w){
+    height: $h;
+    width: $w;
+}
+.div2{
+    padding: 30px;
+    font-size: 30px;
+    @include colorMix();
+    @include dynamic(70px,300px);
+}
+
+@mixin animation($name, $duration, $t) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: $t;
+}
+
+@keyframes colors {
+    0%   {background-color: red; margin-left: 220px;}
+    25%  {background-color: yellow; margin-left: 420px;}
+    50%  {background-color: blue; margin-left: 620px;}
+    100% {background-color: green; margin-left: 800px;}
+  }
+
+#box{
+    @include dynamic(100px,100px);
+    @include animation(colors,4s, infinite);
+}
