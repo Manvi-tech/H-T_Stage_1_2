@@ -23,12 +23,11 @@ const employee = {
 
 // for in 
 for(i in employee){
-if(i==="project" || i==="department"){
-
-    for(j in employee[i]){
-        console.log(`${j}: ${employee[i][j]}`);
-    }
-}else{
-    console.log(`${i}: ${employee[i]}`);
-}
+  if(i==="project" || i==="department"){
+      for(j in employee[i]){
+          console.log(`${j}: ${employee[i][j]}`);
+      }
+  }else{
+      console.log(`${i}: ${employee[i]}`);
+  }
 }
