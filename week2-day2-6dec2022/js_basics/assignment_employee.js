@@ -32,17 +32,15 @@ const employee = {
   val =  employee.getServiceYears();
   console.log(`employee service years is : ${val}`);
   
+  const employees = [
   
+     { id:1, name:'meeta',salary:23  },
+     { id:11, name:'tia',salary:22},
+     { id:21, name:'hemant',salary:23},
+     { id:31, name:'rishi',salary:24}
+  ];
   
-//   const people = [
-  
-//      { name:'meeta',age:23  },
-//      {name:'tia',age:22},
-//      {name:'hemant',age:23},
-//      {name:'rishi',age:24}
-//   ];
-  
-//   for(let i=0;i<people.length;i++){
-  
-//       console.log(`Person details are as : ${people[i].name} ${people[i].age}`);
-//   }
+  for(let i=0;i<employees.length;i++){
+      console.log(`employee details are as : 
+      id is - ${employees[i].id} , name is - ${employees[i].name}, salary is - ${employees[i].salary}`);
+  }
