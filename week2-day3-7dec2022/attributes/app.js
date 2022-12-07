@@ -1,8 +1,24 @@
 
+// change bg color on mouse over
+let color = ["red", "yellow", "green", "blue", "orange"];
+let i=0;
+document.querySelector("body").addEventListener("mouseover", function () {
+    document.querySelector("body").style.backgroundColor = color[i];
+    i++;
+    if(i==5)i=0;
+})
+
+// printing input entered
+let inp = document.getElementById("inp");
+inp.addEventListener('keypress',(event)=> {
+    let x = event.key;
+    console.log(`The pressed key was: ${x}`);
+});
+
+
 
 let div = document.getElementById("div");
 let cnt =0;
-
 //before
 console.log(div.className);
 div.className += " slide";

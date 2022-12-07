@@ -3,6 +3,7 @@
     height: 200px;
     width: 200px;
     border: 1px solid black;
+    margin: auto;
 }
 
 .bg-blue{
@@ -14,7 +15,7 @@
 }
 
 .slide{
-    transform: translate(200px, 200px);
+    transform: translate(30px, 200px);
 }
 
 .slide-back{
