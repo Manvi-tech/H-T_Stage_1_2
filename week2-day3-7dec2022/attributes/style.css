@@ -1,0 +1,22 @@
+
+.box{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.bg-blue{
+    background-color: cadetblue;
+}
+
+.bg-red{
+    background-color: red;   
+}
+
+.slide{
+    transform: translate(200px, 200px);
+}
+
+.slide-back{
+    transform: translate(0px, 0px);
+}
