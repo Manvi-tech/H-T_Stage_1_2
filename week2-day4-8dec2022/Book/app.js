@@ -32,8 +32,8 @@ class UI{
         div.className = `alert ${className}`;
         div.appendChild(document.createTextNode(message));
 
-        const container = document.querySelector(".container");
-        const form = document.querySelector("#book-form");
+        const container = document.querySelector('.container');
+        const form = document.querySelector('#book-form');
         container.insertBefore(div, form);
 
         setTimeout(function(){
@@ -43,7 +43,7 @@ class UI{
     }
 
     deleteBook(target){
-        if(target.className === "delete"){
+        if(target.className === 'delete'){
             target.parentElement.parentElement.remove();
         }
     }
@@ -53,10 +53,10 @@ class Store{
     static getBooks(){
         let books;
 
-        if(localStorage.getItem('books')==null){
+        if(localStorage.getItem('books')===null){
             books=[];
         }else{
-            books=JSON.parse(localStorage.getItem("books"));
+            books=JSON.parse(localStorage.getItem('books'));
         }
         return books;
     }
@@ -66,7 +66,7 @@ class Store{
         books.forEach((book)=>{
             const ui = new UI;
             ui.addBookToList(book);
-        })
+        });
     }
 
     static addBook(book){
@@ -82,7 +82,7 @@ class Store{
                 books.splice(index,1);
             }
         });
-        localStorage.setItem('books', books);
+        localStorage.setItem('books', JSON.stringify(books));
     }
 
 }
@@ -118,4 +118,5 @@ document.getElementById('book-list').addEventListener('click', function(e){
     const ui = new UI();
     ui.deleteBook(e.target);
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+    e.preventDefault();
 });
