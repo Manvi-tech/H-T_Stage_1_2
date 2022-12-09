@@ -12,5 +12,5 @@ async function fetch2(){
     let data = await response.json();
     console.log(data);
 }
-
 fetch2();
+
