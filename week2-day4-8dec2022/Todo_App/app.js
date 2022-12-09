@@ -63,6 +63,7 @@ class Store{
         const todos = Store.getTodos();
         todos.forEach((todo)=>{
             const ui = new UI;
+            todo.className= ' collection-item';
             ui.addTodoToList(todo);
         })
     }
@@ -82,21 +83,6 @@ class Store{
             }
         });
         localStorage.setItem('todos', JSON.stringify(todos));
-    }
-
-    static filterTodos(title){
-        console.log('inside filter ');
-       
-        const todos = Store.getTodos();
-       
-        todos.forEach((todo, index)=>{
-           if(todo.title.find(title)){
-                
-           }
-           else{
-
-           }
-        })
     }
 
 }
@@ -134,10 +120,21 @@ document.getElementById('todo-list').addEventListener('click', function(e){
     e.preventDefault();
 });
 
+// Filter tasks
+function filterTasks(e) {
+    const text = e.target.value.toLowerCase();
+
+    document.querySelectorAll(".collection-item").forEach
+        (function (task) {
+            const item = task.firstChild.textContent;
+              if (item.toLowerCase().indexOf(text) != -1) {
+                task.style.display = "block";
+            } else {
+                task.style.display = "none";
+            }
+        });
+}
+
 //filter todo form : event listener
-document.getElementById('todo-flter-form').addEventListener('submit', function(e){
-    // const ui = new UI();
-    Store.filterTodos(document.getElementById('filter_title').value);
-    e.preventDefault();
-}); 
+document.getElementById('todo-flter-form').addEventListener('submit', filterTasks);
 
