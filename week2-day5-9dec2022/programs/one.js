@@ -19,6 +19,12 @@ for(let j=0;j<arr1.length;j++){
 
 }
 
+let res = arr1[0];
+
+for( i of arr1){
+    if(res<map.get(i))res=i;
+}
+console.log(res);
 console.log(map);
 
 
