@@ -30,7 +30,6 @@ function getPosts(){
 btn.addEventListener('click', getPosts);
 
 // add a post
-
 let newPost = {
     "title": "New Post",
     "body": "This is new  post"
@@ -54,3 +53,18 @@ let newPost = {
 //       }
 // }
 // addPost();
+
+
+// import { appendFile, fstat } from 'fs';
+// appendFile("data.txt", 'xbcnxb', function(err) {
+//   if (err) throw err;
+//   console.log('Saved!');
+// });
+
+
+
+
+
+
+
+
