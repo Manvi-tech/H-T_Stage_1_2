@@ -1,0 +1,105 @@
+
+*{
+    margin:0;
+    padding:0;
+    background-color: #150227;
+ }
+ 
+ h2{
+     text-align: center;
+     margin-top:5%;
+     color:white;
+     font-style: normal;
+     font-family: sans-serif;
+     letter-spacing: 1px;
+ }
+ h2 i{
+     color:white;
+ }
+ 
+ #container{
+     height:55vh;
+     width:40vw;
+     margin-left:28vw;
+     margin-top:8vh;
+ }
+ 
+ #display{
+     height:15vh;
+     width:40vw;
+     font-weight:700;
+     font-size:1.4rem;
+     color:darkblue;
+     background-color: lightgrey;
+     text-align: center;
+ }
+ #display span{
+     position: relative;
+     top:50%;
+     float:right;
+     margin-right:20px;
+     background-color:lightgrey ;
+ }
+ 
+ .row{
+     height:10vh;
+     width:40vw;
+     display: flex;
+ }
+ 
+ 
+ .cell{
+     height:10vh;
+     width:10vw;
+     text-align: center;
+     font-size: 1.5rem;
+     font-weight:700;
+     background-color:#fff389;
+     box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
+ }
+ 
+ .operator{
+     font-color:darkslategray;
+ }
+ 
+ #last-row{
+     height:10vh;
+     width:40vw;
+     display: flex;
+ }
+ 
+ .clear{
+     height:10vh;
+     width:20vw;
+ }
+ 
+ .equal{
+     height:10vh;
+     width:20vw;
+     
+ }
+ 
+ @media screen and (max-width:500px){
+ 
+    #container{
+        margin-left:10vw;
+    }	
+    #container,#display,.row{
+        width:80vw;
+    }
+    .cell{
+        width:20vw;
+    }
+    .clear{
+        width:40vw;
+    }
+    #last-row{
+        width:80vw;
+    }
+    .equal{
+        width:40vw;
+    }
+ 
+ }
+ 
+ 

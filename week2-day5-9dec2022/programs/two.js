@@ -24,10 +24,11 @@ function move(arr1, i, j){
 
     let ele = arr1[i];
     arr1.splice(i,1);
+    console.log(arr1);
     arr1.splice(j, 0, ele);
     console.log(arr1);
 
 }
 
-move(arr1, 0, 2);
+move(arr1, 2,4);
 move(arr2, -1, -2);
