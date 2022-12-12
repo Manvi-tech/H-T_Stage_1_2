@@ -11,7 +11,7 @@ class Manvi extends HTMLElement{
 
 
 
-        let p = document.createElement('p');
+        let p = document.createElement('div');
 
         p.style = this.getAttribute('style');
 
