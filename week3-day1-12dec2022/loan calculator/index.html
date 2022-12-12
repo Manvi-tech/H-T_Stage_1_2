@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">Loan Calculator</h1>
+    <form action="" id="inp-form">
+        <label for="principal">Principal amount</label>
+        <input type="number" id="principal"><br><br>
+
+        <label for="interest">Enter Interest</label>
+        <input type="number" id="interest"><br><br>
+
+        <label for="time">Enter Time</label>
+        <input type="number" id="time"><br><br>
+
+        <input type="submit" id="submit" value="calculate">
+    </form>
+
+    <div id="">
+        <div id="total_payment"></div>
+        <div id="total_interest"></div>
+        <div id="monthly_interest"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
