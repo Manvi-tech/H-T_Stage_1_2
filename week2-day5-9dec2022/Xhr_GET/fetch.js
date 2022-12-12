@@ -8,9 +8,13 @@ fetch('https://jsonplaceholder.typicode.com/users/5')
 
 
 async function fetch2(){
-    let response = await fetch("https://jsonplaceholder.typicode.com/users");
-    let data = await response.json();
-    console.log(data);
+   try{
+        let response = await fetch("https://jsonplaceholder.typicode.com/users");
+        let data = await response.json();
+        console.log(data);
+   }catch(err){
+        console.log(err);
+   }
 }
 fetch2();
 
