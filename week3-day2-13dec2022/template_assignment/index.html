@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+
+    <style>
+        #middle{
+            background-image: url('../hover_assignment/dog1.jpg');
+            height: 200px;
+            width: 200px;
+        }
+        .flexBox{
+            display: flex;
+            margin: 50px auto;
+            width: 50%;
+            justify-content: space-around;
+        }
+    </style>
+
+</head>
+<body>
+
+    <template id="left">
+        <style>
+            h1{color: blueviolet;}
+
+        </style>
+    </template>
+
+    <template id="right">
+        <style>
+            h1{color: red;}
+        </style>
+    </template>
+
+    <template id="bottom">
+        <style>
+            h1{color: green;}
+            .flexBox{
+                display: flex;
+                margin: 50px auto;
+                width: 27%;
+                justify-content: space-around;
+            }
+        </style>
+    </template>
+
+
+    <div class="flexBox">
+        <left-template></left-template>
+        <div id="middle"></div>
+        <right-template></right-template>
+    </div>
+    
+   <bottom-template></bottom-template>
+
+   <script src="app.js"></script>
+</body>
+</html>
