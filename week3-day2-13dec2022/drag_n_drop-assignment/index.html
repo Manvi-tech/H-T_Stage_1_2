@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Favorite Fruits</title>
+
+    <style>
+        body{display: flex;}
+        h2,ol{ margin-left: 100px;}
+        
+    </style>
+</head>
+<body>
+    
+   <div>
+        <h2>Drag Your Favorite Fruits</h2>
+        <ol>
+            <li id="mango" draggable="true" ondragstart="drag(event)">Mango</li>
+            <li id="kiwi" draggable="true" ondragstart="drag(event)">Kiwi</li>
+            <li id="orrange" draggable="true" ondragstart="drag(event)">Orrange</li>
+            <li id="pineapple" draggable="true" ondragstart="drag(event)">Pineapple</li>
+            <li id="grape" draggable="true" ondragstart="drag(event)">Grapes</li>
+            <li id="apple" draggable="true" ondragstart="drag(event)">Apple</li>
+            <li id="guava" draggable="true" ondragstart="drag(event)">Guava</li>
+            <li id="cherry" draggable="true" ondragstart="drag(event)">Cherry</li>
+            <li id="strawberry" draggable="true" ondragstart="drag(event)">Strawberry</li>
+        </ol>
+   </div>
+
+   <div>
+        <h2>Drop here</h2>
+        <ol style="height: 300px; width: 300px; border: 1px solid black;" id="favFruits" ondrop="drop(event)" ondragover="allowDrop(event)"></ol>
+   </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
