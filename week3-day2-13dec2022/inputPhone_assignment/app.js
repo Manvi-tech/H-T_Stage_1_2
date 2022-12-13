@@ -8,12 +8,13 @@ form.addEventListener('submit', function(ev){
      // (+91)-123
      let len = phone_no.length;
 
-    //format: (+91)-
+    //format: (+91)- 
     let a = phone_no.startsWith("(+");
     let b = phone_no.charAt(2)+phone_no.charAt(3);
     let d = phone_no.charAt(4);
     let e = phone_no.charAt(5);
 
+    //check no after (+91)- i.e  (+91)-anndn123 is invalid
     let f = parseInt(phone_no.substr(6, len-6));
     let temp = String(f).length;
 
