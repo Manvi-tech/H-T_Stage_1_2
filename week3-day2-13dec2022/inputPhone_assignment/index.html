@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Phone No</title>
+
+    <style>
+        #content{
+            width: 50vw;
+            height: 400px;
+            margin: 30px auto;
+            border: 1px solid black;
+            background-color: #fffffa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+        }
+        input[type=submit]{
+            background-color: blueviolet;
+            color: white;
+            padding: 5px;
+            font-size: 19px;
+            letter-spacing: 1px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+   <div id="content">
+        <h1>Contact No</h1>
+        
+        <form action="" id="phoneForm">
+            <label for="phoneInput"><h3>Enter phone no in format: (+91)-1234555</h3></label><br>
+            <input type="text" id="phoneInput"><br>
+
+            <input type="submit" value="submit">
+        </form>
+   </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
