@@ -20,12 +20,18 @@ var display = function (p) {
     console.log("topping: ".concat(toppings[p.topping]));
     console.log("size: ".concat(sizes[p.size]));
 };
-var p;
+var p, p2;
 p = {
     id: 100,
     base: 'Pan base',
     topping: toppings.corn,
     size: sizes.medium
 };
-//  console.log(p);
-display(p);
+p2 = {
+    id: 102,
+    base: 'Normal base',
+    topping: toppings.cheeze,
+    size: sizes.small
+};
+var pizzas = [p, p2];
+pizzas.forEach(function (pizza) { return display(pizza); });

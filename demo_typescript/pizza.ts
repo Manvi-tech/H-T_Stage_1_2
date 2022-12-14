@@ -30,7 +30,7 @@ let display=(p)=>{
 }
 
 
- let p:Pizza;
+ let p, p2:Pizza;
 
  p={
     id:100,
@@ -38,6 +38,13 @@ let display=(p)=>{
     topping:toppings.corn,
     size:sizes.medium
  };
+ p2={
+    id:102,
+    base:'Normal base',
+    topping:toppings.cheeze,
+    size:sizes.small
+ };
 
-//  console.log(p);
-display(p);
+ let pizzas:Pizza[]=[p,p2];
+
+pizzas.forEach((pizza)=>display(pizza));
