@@ -12,7 +12,6 @@ function f2<T>(arg1, arg2):T{
 f2<number>(2, 5);
 
 //map class
-
 class MyMap<K,V>{
     private m: Map<K,V>;
 
@@ -42,9 +41,6 @@ obj3.add("hello", true);
 obj3.display();
 
 
-
-
-
 class Person<T>{
 
     name:T;
@@ -53,6 +49,5 @@ class Person<T>{
         this.name=t;
     }
 }
-
 let manvi = new Person<string>('manvi');
 // console.log(manvi.name);
