@@ -1,0 +1,6 @@
+
+Jasmine:-
+
+BDD: BEHAVIOR DRIVEN DEVELOPMENT
+developed by pivotal labs
+unit test framework

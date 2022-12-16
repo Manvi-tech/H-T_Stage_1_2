@@ -1,11 +1,10 @@
 {
-  "name": "jasmineDemos",
+  "name": "learnJasmine",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
   "scripts": {
-    "test":"jasmine"
+    "test": "jasmine"
   },
   "keywords": [],
   "author": "",
