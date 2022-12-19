@@ -15,6 +15,4 @@ describe('color shape testing ',function(){
         expect(colorShape.color()).toEqual("10 20");
 
     })
-
-
 })

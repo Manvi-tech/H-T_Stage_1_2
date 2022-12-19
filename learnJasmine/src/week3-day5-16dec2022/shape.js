@@ -12,8 +12,8 @@ class CreateShape{
         this.shape=shape;
     }
     colorCreateShape(){
-        // return `${this.shape.length} ${this.shape.breadth}`;
-        return null;
+        return `${this.shape.length} ${this.shape.breadth}`;
+        // return null;
     }
 
 }
@@ -26,7 +26,6 @@ class ColorShape{
 
     color(){
         return this.createShape.colorCreateShape();
-        
     }
 }
 module.exports = {Shape, CreateShape, ColorShape};

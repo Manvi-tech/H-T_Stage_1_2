@@ -3,6 +3,6 @@ const greeting = require("../src/app");
 
 describe("testing greeting funciton",function(){
     it("test return value of greeting",function(){
-        expect(greeting()).toEqual('good ebdb');
+        expect(greeting()).toEqual('good morning');
     });
 });
