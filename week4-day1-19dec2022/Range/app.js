@@ -21,6 +21,20 @@ class Range{
 
 }
 
+class Span extends Range{
+    // 100,10 => 100,101,.....109
+    constructor(startNo, count){
+        super(1,startNo);
+        this.count=count;
+    }
+
+    display(){
+        for(let i = this.end; i<this.end+this.count;i++){
+            console.log(i);
+        }
+    }
+}
+
 //12...20
 function parse(str){
     let min = parseInt(str.charAt(0)+str.charAt(1));
@@ -29,11 +43,15 @@ function parse(str){
     return new Range(min, max);
 }
 
-let range = new Range(4,10);
-console.log(range.includes(5));
-console.log(range.includes(1));
-console.log(range.includes(12));
-console.log(range.toString());
+// let range = new Range(4,10);
+// console.log(range.includes(5));
+// console.log(range.includes(1));
+// console.log(range.includes(12));
+// console.log(range.toString());
 
-let obj = parse('12...20');
-console.log(obj.toString());
+// let obj = parse('12...20');
+// console.log(obj.toString());
+
+
+let span = new Span(100,10);
+span.display();
