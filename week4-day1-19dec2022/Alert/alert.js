@@ -1,9 +1,9 @@
 
 var ele = null;
+ele ?? alert(`ele is null`);
 
-// if(ele ?? null){
-//     alert(`ele is null`);
-// }
 
-null ?? alert(`ele is null`);
+
+
+
 
