@@ -24,6 +24,13 @@ class MyMap{
     mapSize(){
         return this.m.size;
     }
+
+    iterate(){
+        console.log('map iteration using forEach');
+        this.m.forEach((val,key)=>{
+            console.log(key, val);
+        });
+    }
 }
 
 
@@ -32,10 +39,7 @@ m.set('manvi', 22);
 m.set('leo', 2);
 m.set('ivnam', 12);
 
-
 let myMap = new MyMap(m);
-//map
-console.log(m);
 
 //check key value
 console.log(myMap.keyValue('leo'));
@@ -47,3 +51,6 @@ console.log(myMap.deleteKey('oel'));
 
 //size of map
 console.log('size is ', myMap.mapSize());
+
+//iterate forEach
+myMap.iterate();
