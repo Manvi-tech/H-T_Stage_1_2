@@ -64,10 +64,13 @@ function calculateMarks(s){
     } 
 }
 
+
 console.log(studentMap);
+
 //add marks to already existing student object
 let obj = new Student(students[0].id, students[0].name, students[0].city, students[0].clearedExam);
 add(obj,[100,20,30]);
+
 console.log(studentMap);
 
 //calculate sum of marks of obj
