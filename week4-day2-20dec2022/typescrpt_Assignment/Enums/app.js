@@ -33,4 +33,15 @@ let ans = convertTemperature(32, "f", "c");
 console.log(`32 Fahreneit = ${ans} Celcius`);
 ans = convertTemperature(0, "c", "f");
 console.log(`0 Celcius = ${ans} Fahreneit`);
+var Direction;
+(function (Direction) {
+    Direction["North"] = "north";
+    Direction["South"] = "south";
+    Direction["East"] = "eats";
+    Direction["West"] = "west";
+})(Direction || (Direction = {}));
+function move(dir) {
+    console.log(dir);
+}
+move(Direction.East);
 export {};

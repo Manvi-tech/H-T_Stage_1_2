@@ -11,10 +11,8 @@ enum weekdays{
     Sunday
 };
 
-
 // create a arrray daysOff with two off days
 let daysOff = [weekdays.Monday, weekdays.Saturday];
-
 
 // create a function convertTemperature(temp:number,fromTo:string):number{}
 // eg: convertTemperature(70,'FToC') c
@@ -42,3 +40,15 @@ console.log(`32 Fahreneit = ${ans} Celcius`);
 
 ans = convertTemperature(0, "c", "f");
 console.log(`0 Celcius = ${ans} Fahreneit`);
+
+enum Direction{
+    North ="north",
+    South ="south",
+    East="eats",
+    West="west"
+}
+
+function move (dir:Direction){
+    console.log(dir);
+}
+move(Direction.East);
