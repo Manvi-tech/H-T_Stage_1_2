@@ -1,3 +1,5 @@
+export {};
+
 // 1. create an interface Artist -- with id name bio
 interface Artist{
     id: Number;
@@ -7,7 +9,9 @@ interface Artist{
 
 // 2.create objects of Artist and store it in an array
 let artists:Artist[]=[];
+
 let artist1, artist2, artist3 :Artist;
+
 artist1={
     id:1,
     name:'manvi',
@@ -65,7 +69,10 @@ obj = new ArtistWork();
 obj.addArtist(artist1, ["dog_paintng1", "nature1"]);
 obj.addArtist(artist2, ["dog_paintng2", "nature2"]);
 obj.addArtist(artist3, ["dog_paintng3", "nature3"]);
+
 obj.print();
 
 obj.addArtist(artist3, ["new painting"]);
+
 obj.print();
+
