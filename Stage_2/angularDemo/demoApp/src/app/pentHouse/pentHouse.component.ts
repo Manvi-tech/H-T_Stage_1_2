@@ -8,9 +8,10 @@ import { Component } from "@angular/core";
 
 export class PentHouseComponent{
    
-  houseId:Number=102;
+  houseId:Number =102;
   area:String = "2000 sq";
   noOfRooms:Number = 2;
-  swimmingPool: Boolean = true
+  swimmingPool: Boolean = true;
+  title:String = "Pent House";
 
 }

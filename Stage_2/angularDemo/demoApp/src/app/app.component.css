@@ -6,3 +6,12 @@ h1{
     text-align: center;
     background-color: lightgoldenrodyellow;
 }
+
+#flexBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+    
+}
