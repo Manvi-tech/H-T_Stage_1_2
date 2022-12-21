@@ -35,10 +35,10 @@ ans = convertTemperature(0, "c", "f");
 console.log(`0 Celcius = ${ans} Fahreneit`);
 var Direction;
 (function (Direction) {
-    Direction["North"] = "north";
-    Direction["South"] = "south";
-    Direction["East"] = "eats";
-    Direction["West"] = "west";
+    Direction["North"] = "moving to north";
+    Direction["South"] = "moving to south";
+    Direction["East"] = "moving to eats";
+    Direction["West"] = "moving to west";
 })(Direction || (Direction = {}));
 function move(dir) {
     console.log(dir);

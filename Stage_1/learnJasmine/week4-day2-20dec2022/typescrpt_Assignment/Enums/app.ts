@@ -42,10 +42,10 @@ ans = convertTemperature(0, "c", "f");
 console.log(`0 Celcius = ${ans} Fahreneit`);
 
 enum Direction{
-    North ="north",
-    South ="south",
-    East="eats",
-    West="west"
+    North ="moving to north",
+    South ="moving to south",
+    East="moving to eats",
+    West="moving to west"
 }
 
 function move (dir:Direction){
