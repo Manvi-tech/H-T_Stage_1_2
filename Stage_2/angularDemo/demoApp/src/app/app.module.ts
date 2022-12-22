@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     PentHouseComponent,
     WelcomeComponent,
     FlatListComponent,
-    AnimalListComponent
+    AnimalListComponent,
+    ProductListComponent
   ],
   imports: [
     FormsModule,
