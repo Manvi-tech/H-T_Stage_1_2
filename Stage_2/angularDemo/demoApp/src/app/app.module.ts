@@ -9,6 +9,7 @@ import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

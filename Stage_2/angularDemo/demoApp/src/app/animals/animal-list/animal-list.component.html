@@ -1,19 +1,25 @@
-<h1>Animal-list</h1>
+<body>
+    <h1>Animal-list</h1>
 
-<table border="">
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Description</th>
-        <th>Image</th>
-    </tr>
+    <table border="">
+        
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Description</th>
+            <th>
+                <button  (click)="imgVisibility()">{{showIamge ? 'Hide Image' : 'Show Image'}}</button>
+            </th>
+        </tr>
 
-    <tr  *ngFor="let animal of animals;let i = index">
-        <td>{{i+1}}</td>
-        <td>{{animal.name}}</td>
-        <td>{{animal.age}}</td>
-        <td>{{animal.description}}</td>
-        <td><img src="{{animal.imageUrl}}" alt=""></td>
-    </tr>
-</table>
+        <tr *ngFor="let animal of animals;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{animal.name}}</td>
+            <td>{{animal.age}}</td>
+            <td>{{animal.description}}</td>
+            <td><img *ngIf="showIamge" src="{{animal.imageUrl}}" alt=""></td>
+        </tr>
+
+    </table>
+</body>

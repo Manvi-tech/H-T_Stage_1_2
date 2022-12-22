@@ -12,6 +12,7 @@ export class PentHouseComponent{
   area:String = "2000 sq";
   noOfRooms:Number = 2;
   swimmingPool: Boolean = true;
+  
   title:String = "Pent House";
 
 }

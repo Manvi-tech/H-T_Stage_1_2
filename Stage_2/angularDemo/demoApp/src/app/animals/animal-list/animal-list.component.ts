@@ -5,9 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './animal-list.component.html',
   styleUrls: ['./animal-list.component.css']
 })
+
 export class AnimalListComponent {
-  
-  animals:any[]=[
+
+  showIamge:boolean=false;
+
+  imgVisibility():void{
+    this.showIamge = !this.showIamge;
+  }
+
+  animals:any[] = [
     {
       id: 101,
       name:"Snoppy",
@@ -29,5 +36,5 @@ export class AnimalListComponent {
       description:'black labrador',
       imageUrl:'../../assets/images/dog1.jpg'
     }
-  ]
+  ];
 }
