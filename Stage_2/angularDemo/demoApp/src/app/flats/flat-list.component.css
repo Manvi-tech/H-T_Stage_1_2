@@ -8,6 +8,7 @@ table{
     margin: auto;
     background-color: lightblue;
     text-align: center;
+    font-size: 20px;
 }
 table img{
     height: 100px;
