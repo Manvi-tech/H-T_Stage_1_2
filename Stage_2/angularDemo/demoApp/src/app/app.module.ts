@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PentHouseComponent } from './pentHouse/pentHouse.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlatListComponent } from './flats/flat-list.component';
+import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FlatListComponent } from './flats/flat-list.component';
     AppComponent,
     PentHouseComponent,
     WelcomeComponent,
-    FlatListComponent
+    FlatListComponent,
+    AnimalListComponent
   ],
   imports: [
     BrowserModule,

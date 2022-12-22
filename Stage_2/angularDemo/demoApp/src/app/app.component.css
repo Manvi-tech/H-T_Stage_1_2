@@ -1,10 +1,15 @@
 
+body{
+    background-color: lightgoldenrodyellow;
+    padding-bottom: 20px;
+}
+
 h1{
     color: blue;
     letter-spacing: 1px;
     font-style: italic;
     text-align: center;
-    background-color: lightgoldenrodyellow;
+    background-color: lightpink;
 }
 
 #flexBox{

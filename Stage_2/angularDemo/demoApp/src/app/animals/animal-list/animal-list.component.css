@@ -1,4 +1,6 @@
 
+
+
 h1{
     text-align: center;
     margin: 20px 0;
@@ -11,5 +13,5 @@ table{
 }
 table img{
     height: 100px;
-    width: 200px;
+    width: 100px;
 }
