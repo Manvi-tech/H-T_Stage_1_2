@@ -1,0 +1,22 @@
+<h1>Flat-list</h1>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Area</th>
+        <th># Rooms</th>
+        <th>SwmmingPool</th>
+        <th>Iamge</th>
+    </tr>
+
+    <tr *nfFor="let flat of flats;let i=index; ">
+        <td>{{i+1}}</td>
+        <td>{{flat.area}}</td>
+        <td>{{flat.noOfRooms}}</td>
+        <td>{{flat.swimmingPool}}</td>
+        <td><img src="../../assets/images/flat.jpeg" alt=""></td>
+    </tr>
+</table>
+
+
+

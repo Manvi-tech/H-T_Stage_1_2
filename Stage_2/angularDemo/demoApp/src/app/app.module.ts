@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PentHouseComponent } from './pentHouse/pentHouse.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { FlatListComponent } from './flats/flat-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PentHouseComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    FlatListComponent
   ],
   imports: [
     BrowserModule,

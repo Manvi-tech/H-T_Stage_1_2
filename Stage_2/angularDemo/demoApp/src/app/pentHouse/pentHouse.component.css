@@ -1,15 +1,10 @@
 
 
-h1,ol{
+h1{
     letter-spacing: 1px;
-    margin: 20px auto;
+    height: 100px;
+    padding: 10px;
+    color: white;
+    background-color: aquamarine;
 }
 
-ol{
-    margin-right: 200px;
-}
-
-ol li{
-    font-size: 20px;
-    margin-top: 20px;
-}
