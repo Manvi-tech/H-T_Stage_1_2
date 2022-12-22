@@ -1,4 +1,7 @@
+
 <h1>Flat-list</h1>
+
+<input type="number" (keyup)="filterFlats()" [(ngModel)]="numRooms" placeholder="numRooms">
 
 <table border="" *ngIf="flats.length">
     <tr>
@@ -9,7 +12,7 @@
         <th>Iamge</th>
     </tr>
 
-    <tr *ngFor="let flat of flats;let i = index">
+    <tr *ngFor="let flat of filteredFlats;let i = index">
         <td>{{i+1}}</td>
         <td>{{flat.area}}</td>
         <td>{{flat.noOfRooms}}</td>

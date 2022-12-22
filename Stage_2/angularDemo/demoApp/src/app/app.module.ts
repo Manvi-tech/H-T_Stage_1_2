@@ -7,6 +7,7 @@ import { PentHouseComponent } from './pentHouse/pentHouse.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,6 +20,7 @@ import { AnimalListComponent } from './animals/animal-list/animal-list.component
     AnimalListComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
