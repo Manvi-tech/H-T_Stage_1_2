@@ -10,7 +10,7 @@
     <input type="text" (keyup)="filterProd()" [(ngModel)]="category" placeholder="category">
 
     <div class="table-responsive">  
-        <table border="" *ngIf="products.length" class="table ">
+        <table  *ngIf="products.length" class="table ">
             <tr>
                 <th>#</th>
                 <th>Name</th>
@@ -18,6 +18,7 @@
                 <th>Price</th>
                 <th>Rating</th>
                 <th>Image</th>
+                <th></th>
             </tr>
 
             <tr *ngFor="let p of filteredProducts ;let i = index">
@@ -33,6 +34,9 @@
                     </app-star>
                 </td>
                 <td><img src="{{p.image}}" alt=""></td>
+                <td>
+                    <button class="btn btn-primary bg-dark">add to cart</button>
+                </td>
             </tr>
         </table>
     </div>
