@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { StarComponent } from './star/star.component';
 import { CartListComponent } from './cart/cart-list.component';
+import { DatePipePipe } from './date-pipe.pipe';
+import { RepeatDataPipe } from './repeat-data.pipe';
 
 
 
@@ -23,7 +25,9 @@ import { CartListComponent } from './cart/cart-list.component';
     AnimalListComponent,
     ProductListComponent,
     StarComponent,
-    CartListComponent
+    CartListComponent,
+    DatePipePipe,
+    RepeatDataPipe
   ],
   imports: [
     FormsModule,
