@@ -26,7 +26,6 @@
                 <td>{{p.name}}</td>
                 <td>{{p.category}}</td>
                 <td>{{p.price}}</td>
-                <!-- <td>{{p.rating}}</td> -->
                 <td>
                     <app-star 
                         [rating]="p.rating"
@@ -35,7 +34,10 @@
                 </td>
                 <td><img src="{{p.image}}" alt=""></td>
                 <td>
-                    <button class="btn btn-primary bg-dark">add to cart</button>
+                    <button 
+                       (click)="onSelect(p)"
+                       class="btn btn-primary bg-dark">add to cart
+                    </button>
                 </td>
             </tr>
         </table>

@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component , EventEmitter, OnInit, Output} from '@angular/core';
 import { Categories, IProduct } from './product';
 
 @Component({
@@ -59,6 +59,13 @@ export class ProductListComponent implements OnInit{
   ratingClick(msg:string):void{
     // console.log('inside product click')
     this.title = msg;
+  }
+
+  @Output() emitProductToCart:EventEmitter<IProduct>= new EventEmitter<IProduct>();
+
+  //called on click of btn add to cart and emit the product to app component
+  onSelect(p:IProduct){
+    this.emitProductToCart.emit(p);
   }
 
 }
