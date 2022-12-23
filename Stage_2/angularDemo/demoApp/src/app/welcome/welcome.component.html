@@ -4,16 +4,39 @@
 
 
 <h1> {{msg | repeatData:5}} </h1>
-
-
 <input type="number" [(ngModel)]="nums" placeholder="{{nums}}">
 
-<div [ngSwitch]="nums">
-  
+<ng-container [ngSwitch]="nums">
+
+    <ng-container *ngSwitchCase="1">
+        <ng-container *ngTemplateOutlet="template12"></ng-container>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="2">
+        <ng-container *ngTemplateOutlet="template12"></ng-container>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="3">
+        <ng-container *ngTemplateOutlet="template34"></ng-container>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="4">
+        <ng-container *ngTemplateOutlet="template34"></ng-container>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault=>
+       default
+    </ng-container>
+
+    <ng-template #template12>nums is either 1 or 2</ng-template>
+    <ng-template #template34>nums is either 3 or 4</ng-template>
+   
+</ng-container>
+
+<!-- <div [ngSwitch]="nums">
     <div *ngSwitchCase="1">one</div>
     <div *ngSwitchCase="2">two</div>
     <div *ngSwitchCase="3">three</div>
     <div *ngSwitchCase="4">four</div>
     <div *ngSwitchDefault> "other"</div>
-
-</div>
+</div> -->
