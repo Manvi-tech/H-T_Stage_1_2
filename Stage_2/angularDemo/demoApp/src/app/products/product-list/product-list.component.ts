@@ -11,6 +11,8 @@ export class ProductListComponent implements OnInit{
     this.filteredProducts=this.products;
   }
 
+  title: string='';
+  
   category:Categories = Categories.All;
  
   filteredProducts:IProduct[]=[];
@@ -52,6 +54,11 @@ export class ProductListComponent implements OnInit{
 
   filterProd():void{
      this.filteredProducts = this.products.filter((p:IProduct)=>p.category === (this.category));
+  }
+
+  ratingClick(msg:string):void{
+    // console.log('inside product click')
+    this.title = msg;
   }
 
 }

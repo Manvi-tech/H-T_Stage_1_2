@@ -1,7 +1,8 @@
 <div class="card" style="width: 80%; margin: auto;">
 
     <div class="card-header">
-        Product List
+        <h2>Product List</h2>
+        <h4> {{title}}</h4>
     </div>
     
     <div class="card-body">
@@ -25,7 +26,12 @@
                 <td>{{p.category}}</td>
                 <td>{{p.price}}</td>
                 <!-- <td>{{p.rating}}</td> -->
-                <td><app-star [rating]="p.rating"></app-star></td>
+                <td>
+                    <app-star 
+                        [rating]="p.rating"
+                        (ratingEventClicked) = "ratingClick($event)">
+                    </app-star>
+                </td>
                 <td><img src="{{p.image}}" alt=""></td>
             </tr>
         </table>
