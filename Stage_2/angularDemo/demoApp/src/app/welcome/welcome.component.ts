@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class WelcomeComponent {
 
   msg:string="manvi ";
-  
+  nums:number=0;
 }

@@ -1,6 +1,19 @@
 
 
-<h1>welcome works!</h1>
+<h1>welcome Component!</h1>
 
 
 <h1> {{msg | repeatData:5}} </h1>
+
+
+<input type="number" [(ngModel)]="nums" placeholder="{{nums}}">
+
+<div [ngSwitch]="nums">
+  
+    <div *ngSwitchCase="1">one</div>
+    <div *ngSwitchCase="2">two</div>
+    <div *ngSwitchCase="3">three</div>
+    <div *ngSwitchCase="4">four</div>
+    <div *ngSwitchDefault> "other"</div>
+
+</div>
