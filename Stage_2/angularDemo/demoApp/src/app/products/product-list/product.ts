@@ -1,5 +1,6 @@
 
 export enum Categories{
+    All="all",
     Food="food",
     Cosmetics="cosmetic",
     Clothing="clothing",
@@ -11,5 +12,6 @@ export interface IProduct{
     name:string,
     price:number,
     image: string,
-    category: Categories 
+    category: Categories ,
+    rating: number
 }

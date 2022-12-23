@@ -8,7 +8,7 @@ input{
     margin: 30px auto;
 }
 table{
-    width: 70%;
+    width: 90%;
     margin: auto;
     background-color: lightblue;
     text-align: center;
@@ -18,3 +18,4 @@ table img{
     height: 100px;
     width: 200px;
 }
+

@@ -9,6 +9,7 @@ import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { StarComponent } from './star/star.component';
 
 
 
@@ -19,7 +20,8 @@ import { ProductListComponent } from './products/product-list/product-list.compo
     WelcomeComponent,
     FlatListComponent,
     AnimalListComponent,
-    ProductListComponent
+    ProductListComponent,
+    StarComponent
   ],
   imports: [
     FormsModule,

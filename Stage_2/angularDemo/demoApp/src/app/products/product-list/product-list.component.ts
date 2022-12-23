@@ -11,7 +11,7 @@ export class ProductListComponent implements OnInit{
     this.filteredProducts=this.products;
   }
 
-  category:Categories = Categories.Food;
+  category:Categories = Categories.All;
  
   filteredProducts:IProduct[]=[];
 
@@ -21,33 +21,37 @@ export class ProductListComponent implements OnInit{
       name:'Pizza',
       price: 200,
       image: '../../assets/images/pizza.jpg',
-      category: Categories.Food
+      category: Categories.Food,
+      rating: 3
     },
     {
       id:5,
       name:'Tshirt',
       price:1200,
       image: '../../assets/images/tshirt.jpg',
-      category: Categories.Clothing
+      category: Categories.Clothing,
+      rating: 3.7
     },
     {
       id:10,
       name:'Table',
       price: 120000,
       image: '../../assets/images/table.jpg',
-      category: Categories.Furniture
+      category: Categories.Furniture,
+      rating: 4.5
     },
     {
       id:16,
       name:'Shampoo',
       price:400,
       image: '../../assets/images/dog2.jpg',
-      category: Categories.Cosmetics
+      category: Categories.Cosmetics,
+      rating: 4
     }
   ]
 
   filterProd():void{
-     this.filteredProducts = this.products.filter((p:IProduct)=>p.category.includes(this.category));
+     this.filteredProducts = this.products.filter((p:IProduct)=>p.category === (this.category));
   }
 
 }

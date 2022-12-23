@@ -9,7 +9,8 @@
         <th>Name</th>
         <th>Category</th>
         <th>Price</th>
-        <th>Iamge</th>
+        <th>Rating</th>
+        <th>Image</th>
     </tr>
 
     <tr *ngFor="let p of filteredProducts ;let i = index">
@@ -17,6 +18,8 @@
         <td>{{p.name}}</td>
         <td>{{p.category}}</td>
         <td>{{p.price}}</td>
+        <!-- <td>{{p.rating}}</td> -->
+        <td><app-star [rating]="p.rating"></app-star></td>
         <td><img src="{{p.image}}" alt=""></td>
     </tr>
 </table>
