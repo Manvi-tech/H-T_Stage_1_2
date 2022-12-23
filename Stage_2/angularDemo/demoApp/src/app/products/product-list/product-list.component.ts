@@ -24,7 +24,8 @@ export class ProductListComponent implements OnInit{
       price: 200,
       image: '../../assets/images/pizza.jpg',
       category: Categories.Food,
-      rating: 3
+      rating: 4,
+      quantity:0
     },
     {
       id:5,
@@ -32,7 +33,8 @@ export class ProductListComponent implements OnInit{
       price:1200,
       image: '../../assets/images/tshirt.jpg',
       category: Categories.Clothing,
-      rating: 3.7
+      rating: 3.7,
+      quantity:0
     },
     {
       id:10,
@@ -40,7 +42,8 @@ export class ProductListComponent implements OnInit{
       price: 120000,
       image: '../../assets/images/table.jpg',
       category: Categories.Furniture,
-      rating: 4.5
+      rating: 4.5,
+      quantity:0
     },
     {
       id:16,
@@ -48,7 +51,8 @@ export class ProductListComponent implements OnInit{
       price:400,
       image: '../../assets/images/dog2.jpg',
       category: Categories.Cosmetics,
-      rating: 4
+      rating: 4,
+      quantity:0
     }
   ]
 
@@ -62,6 +66,22 @@ export class ProductListComponent implements OnInit{
   }
 
   @Output() emitProductToCart:EventEmitter<IProduct>= new EventEmitter<IProduct>();
+
+  increaseQuantity(p:IProduct):void{
+     let index = this.products.findIndex((prod)=> p.id === prod.id);
+     this.products[index].quantity+=1;
+     this.emitProductToCart.emit(p);
+  }
+
+  decreaseQuantity(p:IProduct):void{
+    let index = this.products.findIndex((prod)=> p.id === prod.id);
+   
+    if(this.products[index].quantity!=0){
+      this.products[index].quantity-=1;
+      this.emitProductToCart.emit(p);
+    }
+    
+  }
 
   //called on click of btn add to cart and emit the product to app component
   onSelect(p:IProduct){

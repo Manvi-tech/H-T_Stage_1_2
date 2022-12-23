@@ -15,7 +15,7 @@
                 <th>Category</th>
                 <th>Price</th>
                 <th>Rating</th>
-                <th>Image</th>
+                <th>Quantity</th>
             </tr>
 
             <tr *ngFor="let p of cartList ;let i = index">
@@ -31,7 +31,7 @@
                     </app-star>
                     <!-- ratingClick is a function cart-list.comp.ts which is displayng result after stars clicked -->
                 </td>
-                <td><img src="{{p.image}}" alt=""></td>
+                <td>{{p.quantity}}</td>
             </tr>
         </table>
     </div>

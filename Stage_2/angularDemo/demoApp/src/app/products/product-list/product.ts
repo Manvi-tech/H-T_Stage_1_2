@@ -13,5 +13,6 @@ export interface IProduct{
     price:number,
     image: string,
     category: Categories ,
-    rating: number
+    rating: number,
+    quantity:number
 }
