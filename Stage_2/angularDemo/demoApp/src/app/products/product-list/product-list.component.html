@@ -1,28 +1,36 @@
+<div class="card" style="width: 80%; margin: auto;">
 
-<h1>Product List</h1>
+    <div class="card-header">
+        Product List
+    </div>
+    
+    <div class="card-body">
+    
+    <input type="text" (keyup)="filterProd()" [(ngModel)]="category" placeholder="category">
 
-<input type="text" (keyup)="filterProd()" [(ngModel)]="category" placeholder="category">
+    <div class="table-responsive">  
+        <table border="" *ngIf="products.length" class="table ">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Image</th>
+            </tr>
 
-<table border="" *ngIf="products.length">
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Rating</th>
-        <th>Image</th>
-    </tr>
+            <tr *ngFor="let p of filteredProducts ;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.category}}</td>
+                <td>{{p.price}}</td>
+                <!-- <td>{{p.rating}}</td> -->
+                <td><app-star [rating]="p.rating"></app-star></td>
+                <td><img src="{{p.image}}" alt=""></td>
+            </tr>
+        </table>
+    </div>
 
-    <tr *ngFor="let p of filteredProducts ;let i = index">
-        <td>{{i+1}}</td>
-        <td>{{p.name}}</td>
-        <td>{{p.category}}</td>
-        <td>{{p.price}}</td>
-        <!-- <td>{{p.rating}}</td> -->
-        <td><app-star [rating]="p.rating"></app-star></td>
-        <td><img src="{{p.image}}" alt=""></td>
-    </tr>
-</table>
+</div>
 
-
-
+</div>

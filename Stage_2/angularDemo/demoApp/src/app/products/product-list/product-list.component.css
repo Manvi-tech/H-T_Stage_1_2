@@ -7,6 +7,7 @@ input{
     display: block;
     margin: 30px auto;
 }
+
 table{
     width: 90%;
     margin: auto;
@@ -17,5 +18,5 @@ table{
 table img{
     height: 100px;
     width: 200px;
-}
+} 
 
