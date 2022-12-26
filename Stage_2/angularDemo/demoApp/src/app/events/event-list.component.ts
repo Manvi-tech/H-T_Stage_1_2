@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { EventService } from 'shared/event.service';
 import { IEvent } from './events';
 
 @Component({
@@ -8,13 +10,30 @@ import { IEvent } from './events';
 })
 export class EventListComponent implements OnInit, OnDestroy{
   
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
-  
+  constructor(private eventService:EventService){}
+
+  sub!:Subscription;
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+     this.sub = this.eventService.getEvents()
+              .subscribe(
+                (response)=>{
+                  console.log(response);
+                  this.eventsList = response;
+                },
+                (err)=>{
+                    console.log(err);
+                },
+                ()=>{
+                  console.log('completed');
+                }
+              );
   }
+
+  ngOnDestroy(): void {
+     this.sub.unsubscribe();
+  }
+
 
   eventsList:IEvent[]=[];
 
