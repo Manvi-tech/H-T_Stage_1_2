@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { IProduct } from "src/app/products/product-list/product";
 
 @Injectable({
     providedIn:'root'
@@ -7,5 +8,9 @@ import { Injectable } from "@angular/core";
 export class LoggingService{
     log():string{
         return "logging service called!";
+    }
+
+    logProducts(p:IProduct[]):void{
+        console.log(p);
     }
 }
