@@ -27,5 +27,6 @@ export class AppComponent{
       this.cartProducts = this.cartProducts.filter((prod)=>prod.quantity !==0)
 
   }
-
+  
 }
+

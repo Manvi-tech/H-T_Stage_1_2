@@ -12,3 +12,11 @@
 <h1 class="{{title}}" id="{{title}}">Hello {{name}}</h1>
 <h1>Arithmatic operations :: {{2+2}} </h1>
 <h1>If Else :: {{name === "Manvi" ? 'name is equal to Manvi': 'name is not equal to Manvi'}}</h1>
+
+<div>
+    <app-product-list (emitProduct)="receiveEmittedProduct($event)"></app-product-list>
+</div>
+
+<div>
+    <app-cart-list [cartList]="cartProducts"></app-cart-list>
+</div>
