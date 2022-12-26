@@ -1,4 +1,5 @@
 import { Component , EventEmitter, OnInit, Output} from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { LoggingService } from 'shared/logging.service';
 import { ProductService } from 'shared/product.service';
 import { Categories, IProduct } from './product';
@@ -17,8 +18,26 @@ export class ProductListComponent implements OnInit{
       this.logService.logProducts(this.products);
   }
 
+  sub!:Subscription;
+
   ngOnInit(): void {
-    this.filteredProducts=this.products;
+    // this.filteredProducts=this.products;
+    // this.productService.getProducts() returns observable<IProduct[]>
+    
+    this.sub = this.productService.getProducts()
+    .subscribe(
+      (response)=>{
+        console.log(response);
+        this.products = response;
+        this.filteredProducts = response;
+      },
+      (err)=>{
+          console.log(err);
+      },
+      ()=>{
+        console.log('completed');
+      }
+    );
   }
 
   title: string='';
@@ -26,8 +45,48 @@ export class ProductListComponent implements OnInit{
   category:Categories = Categories.All;
  
   filteredProducts:IProduct[]=[];
+  
+  products:IProduct[]=
+  [
+     {
+       "id":1 ,
+       "name":"Pizza",
+       "price": 200,
+       "image": "../../assets/images/pizza.jpg",
+       "category": Categories.Food,
+       "rating": 4,
+       "quantity":0
+     },
+     {
+       "id":5,
+       "name":"Tshirt",
+       "price":1200,
+       "image": "../../assets/images/tshirt.jpg",
+       "category": Categories.Clothing,
+       "rating": 3.7,
+       "quantity":0
+     },
+     {
+       "id":10,
+       "name":"Table",
+       "price": 120000,
+       "image": "../../assets/images/table.jpg",
+       "category": Categories.Furniture,
+       "rating": 4.5,
+       "quantity":0
+     },
+     {
+       "id":16,
+       "name":"Shampoo",
+       "price":400,
+       "image": "../../assets/images/dog2.jpg",
+       "category": Categories.Cosmetics,
+       "rating": 4,
+       "quantity":0
+     }
+   ];
 
-  products:IProduct[]= this.productService.getProducts();
+
 
   filterProd():void{
      this.filteredProducts = this.products.filter((p:IProduct)=>p.category === (this.category));

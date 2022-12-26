@@ -12,7 +12,7 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { StarComponent } from './star/star.component';
 import { CartListComponent } from './cart/cart-list.component';
 import { RepeatDataPipe } from './repeat-data.pipe';
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import { RepeatDataPipe } from './repeat-data.pipe';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
