@@ -21,3 +21,6 @@ table img{
     width: 200px;
 } 
 
+button{
+    margin: 20px auto !important;
+}

@@ -5,3 +5,7 @@ h1{
     padding: 10px;
     border: 1px solid gray;
 }
+
+button{
+    margin: 20px auto !important;
+}
