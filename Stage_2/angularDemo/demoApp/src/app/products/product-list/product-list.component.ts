@@ -1,4 +1,4 @@
-import { Component , EventEmitter, OnInit, Output} from '@angular/core';
+import { Component , EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { LoggingService } from 'shared/logging.service';
 import { ProductService } from 'shared/product.service';
@@ -9,10 +9,13 @@ import { Categories, IProduct } from './product';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit{
+export class ProductListComponent implements OnInit, OnDestroy{
 
-
-  constructor(private productService:ProductService, private logService:LoggingService){};
+  constructor(private productService:ProductService, private logService:LoggingService){}
+  
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  };
 
   displayProd(){
       this.logService.logProducts(this.products);
