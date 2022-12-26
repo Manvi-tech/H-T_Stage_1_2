@@ -14,6 +14,7 @@ import { CartListComponent } from './cart/cart-list.component';
 import { RepeatDataPipe } from './repeat-data.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EventListComponent } from './events/event-list.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     StarComponent,
     CartListComponent,
     RepeatDataPipe,
-    NavbarComponent
+    NavbarComponent,
+    EventListComponent
   ],
   imports: [
     FormsModule,

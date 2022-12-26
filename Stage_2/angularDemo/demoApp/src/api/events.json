@@ -1,0 +1,45 @@
+
+// 1.create a service EventService  in shared folder-- getEvents() return Events create events.jsonevent {​​​​​​ id , name ,date ,time ,price,imageUrl,location:{​​​​​​ address,city,country}​​​​​​,sessions:[ {​​​​​​id , name , presenter,duration,level,voters:[string array of voters name]}​​​​​​] events foldereventlistcomponenteventdetailcomponent  
+
+
+// export class EventService --@Injectable{​​​​​​urlinject the dependencyHttpClient http.get( )}​​​​​​getEvents --Observable<Event[]> 
+
+// export EventListComponent{​​​​​​events:Event[]=[]; constructor (private eventService : EventService){​​​​​​}​​​​​​  ngOnInit(){​​​​​​this.events =this.eventService.getEvents().subscribe((res)=>{​​​​​​ }​​​​​​,(err)=>{​​​​​​ }​​​​​​ );
+
+// [4:22 PM] Muskaan (Guest)
+// *ngIf check for the length of events  *ngFor  --for of looplet event of events;index=index;<eventdetail [event]=event> parent child communication
+
+[
+    {
+        "id":1,
+        "name":"enva",
+        "date": "23/12/2022",
+        "time":"08:30 am",
+        "price":102,
+        "imageUrl":"../assets/images/dog1.jpg",
+        "location":{
+            "address":"",
+            "city":"",
+            "country":""
+        },
+        "sessions":[
+            {
+                "id":10,
+                "name":"",
+                "presentor":"Manvi",
+                "duration":"",
+                "level":10,
+                "voters":["leo", "snoppy", "tufffy"]
+            },
+            {
+                "id":11,
+                "name":"",
+                "presentor":"Ivnam",
+                "duration":"",
+                "level":11,
+                "voters":["leo", "snoppy", "tufffy"]
+            }
+        ]
+    }
+]
+
