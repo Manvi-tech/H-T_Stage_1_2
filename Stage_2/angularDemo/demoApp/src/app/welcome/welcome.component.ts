@@ -13,6 +13,10 @@ export class WelcomeComponent {
 
   msg:string="manvi ";
   nums:number=0;
-
-  logMsg:string = this.logService.log();
+  logMsg:string='';
+  
+  callLog():void{
+    this.logMsg = this.logService.log();
+  }
+  
 }
