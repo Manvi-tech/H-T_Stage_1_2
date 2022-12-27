@@ -23,7 +23,8 @@
                         <h6>Location: </h6> 
                         <h6 class="text-secondary">{{ev.location.address}}, {{ev.location.city}}, {{ev.location.country}}</h6>
                     </li>
-                    <li class="list-group-item" style="flex-direction: column;" *ngFor="let session of ev.sessions;">
+                    <li class="list-group-item" style="flex-direction: column;" 
+                    *ngFor="let session of ev.sessions;">
                         <h6>Session {{session.id}} on:  {{session.name}}</h6>
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -41,29 +42,16 @@
                             <li class="list-group-item">
                                 <h6>Voters: </h6>
                                 <h6 class="text-secondary">
-                                    <span *ngfor="let v of session.voters; let i=index;">
-                                        {{v}}
+                                    <span>
+                                        {{session.voters}}
                                     </span>
                                 </h6>
                             </li>
                         </ul>
                     </li>
+
                 </ul>
 
-                <!-- <ul class="list-group">
-                    <li class="list-group-item" *ngFor="ev.sessions">
-                        "id":10,
-                        "name":"",
-                        "presentor":"Manvi",
-                        "duration":"",
-                        "level":10,
-                        "voters":["leo", "snoppy", "tufffy"]
-                    </li>
-                   
-                </ul> -->
-                
-              
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         

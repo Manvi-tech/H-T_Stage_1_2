@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { IEvent } from "./event_detaiil/event-detail/events";
 import { IProduct } from "./products/product-list/product";
 
 @Component({
@@ -9,6 +10,8 @@ import { IProduct } from "./products/product-list/product";
 
 export class AppComponent{
   
+  events:IEvent[]=[];
+
   pageTitle:string = 'my angular app';
 
   cartProducts:IProduct[]=[];

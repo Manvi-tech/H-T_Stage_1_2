@@ -19,7 +19,7 @@ export interface IEvent{
             presentor:string,
             duration:string,
             level:number,
-            voters:[]
+            voters:string[]
         }
     ]
     
