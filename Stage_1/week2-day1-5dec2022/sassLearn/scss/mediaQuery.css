@@ -1,0 +1,26 @@
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div img {
+  width: 60px;
+  height: 100px;
+}
+
+div h1 {
+  margin-left: 30px;
+}
+
+@media (max-width: 600px) {
+  div img {
+    width: 200px;
+    height: 200px;
+  }
+  div h1 {
+    font-size: 40px;
+    color: lavender;
+  }
+}
+/*# sourceMappingURL=mediaQuery.css.map */

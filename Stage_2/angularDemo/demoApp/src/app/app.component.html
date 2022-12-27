@@ -3,6 +3,8 @@
 <body>
     
     <app-navbar></app-navbar>
+
+    <app-event-list></app-event-list>
     
     <!-- <h1>Hello world</h1> -->
 
@@ -20,13 +22,13 @@
         <!-- emitProductToCart is emitter output in product-list which is emiting product to
              app's  receiveEmittedProduct() function
         -->
-        <app-product-list (emitProductToCart) = "receiveEmittedProduct($event)"></app-product-list>
+        <!-- <app-product-list (emitProductToCart) = "receiveEmittedProduct($event)"></app-product-list> -->
     </div>
 
     <div>
         <!-- cartProducts is in app.component.ts -->
         <!-- cartList is property of cart-list component -->
-        <app-cart-list [cartList]="cartProducts"></app-cart-list>
+        <!-- <app-cart-list [cartList]="cartProducts"></app-cart-list> -->
     </div>
 
 </body>
