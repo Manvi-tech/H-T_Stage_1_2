@@ -48,10 +48,10 @@ export class ProductService{
 
       
 changeSelectedProduct(selectedProduct:IProduct | null):void{
-
     this.selectedProductSource.next(selectedProduct);
     console.log(selectedProduct);
-  
+    console.log(this.selectedProductChanges$);
+    console.log(this.selectedProductSource);
 }
   
     //errorhandler which returns the Observable with errorMessage

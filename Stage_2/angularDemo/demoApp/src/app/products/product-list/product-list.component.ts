@@ -130,5 +130,8 @@ export class ProductListComponent implements OnInit, OnDestroy{
     this.productService.changeSelectedProduct(product);
   }
 
+  addProduct():void{
+    console.log(this.productService.newProduct());
+  }
   
 }
