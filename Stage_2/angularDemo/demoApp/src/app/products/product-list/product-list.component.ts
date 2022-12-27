@@ -123,4 +123,12 @@ export class ProductListComponent implements OnInit, OnDestroy{
     this.emitProductToCart.emit(p);
   }
 
+  newProduct():void{
+    this.productService.changeSelectedProduct(this.productService.newProduct());
+  }
+   productSelected(product:IProduct):void{
+    this.productService.changeSelectedProduct(product);
+  }
+
+  
 }

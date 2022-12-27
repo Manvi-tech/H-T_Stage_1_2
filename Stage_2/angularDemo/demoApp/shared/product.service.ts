@@ -50,8 +50,9 @@ export class ProductService{
 changeSelectedProduct(selectedProduct:IProduct | null):void{
 
     this.selectedProductSource.next(selectedProduct);
+    console.log(selectedProduct);
   
-  }
+}
   
     //errorhandler which returns the Observable with errorMessage
     errorHandler=(err:any)=>{

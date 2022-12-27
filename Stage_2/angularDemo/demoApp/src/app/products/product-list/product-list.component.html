@@ -22,7 +22,7 @@
                 <tr *ngFor="let p of filteredProducts ;let i = index">
                     <td>{{p.id}}</td>
                     <td>{{p.name}}</td>
-                    <td>{{p.category}}</td>
+                    <td  (click)="productSelected(p)">{{p.category}}</td>
                     <td>{{p.price}}</td>
                     <td>
                         <app-star 
