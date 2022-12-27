@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { Observable } from "rxjs";
+import { IEvent } from "src/app/events/events";
 
 @Injectable({
     providedIn:'root'
@@ -11,7 +12,7 @@ export class InMemoryDbEventService implements InMemoryDbService {
     
     createDb(reqInfo?: RequestInfo | undefined): {} | Observable<{}> | Promise<{}> { 
         
-        const events = [
+        let events:IEvent[] = [
             {
                 "id":1,
                 "name":"enva",
@@ -58,7 +59,7 @@ export class InMemoryDbEventService implements InMemoryDbService {
                 },
                 "sessions":[
                     {
-                        "id":20,
+                        "id":1,
                         "name":"AI",
                         "presentor":"Manvi",
                         "duration":"",
@@ -66,7 +67,7 @@ export class InMemoryDbEventService implements InMemoryDbService {
                         "voters":["leo", "snoppy", "tufffy"]
                     },
                     {
-                        "id":21,
+                        "id":1,
                         "name":"",
                         "presentor":"Ivnam",
                         "duration":"",
@@ -109,7 +110,7 @@ export class InMemoryDbEventService implements InMemoryDbService {
             }
         ]
 
-        return events;
+        return {events};
                 
     }
 

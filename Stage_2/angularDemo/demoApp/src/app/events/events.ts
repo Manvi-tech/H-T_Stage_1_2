@@ -1,3 +1,4 @@
+import { ISession } from "./sessions"
 
 export interface IEvent{
     
@@ -11,16 +12,7 @@ export interface IEvent{
         address:string,
         city: string,
         country:string
-    };
-    sessions:[
-        {
-            id:number,
-            name:string,
-            presentor:string,
-            duration:string,
-            level:number,
-            voters:string[]
-        }
-    ]
+    },
+    sessions: ISession[]
     
 }
