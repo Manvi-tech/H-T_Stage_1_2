@@ -22,6 +22,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   }
 
   sub!:Subscription;
+  selectedProduct!:IProduct | null;
 
   ngOnInit(): void {
     // this.filteredProducts=this.products;
@@ -41,6 +42,10 @@ export class ProductListComponent implements OnInit, OnDestroy{
         console.log('completed');
       }
     );
+    this.productService.selectedProductChanges$
+    .subscribe(currentProduct => this.selectedProduct = currentProduct);
+
+    // console.log(this.selectedProduct); : null initially
   }
 
   title: string='';
@@ -126,7 +131,9 @@ export class ProductListComponent implements OnInit, OnDestroy{
   newProduct():void{
     this.productService.changeSelectedProduct(this.productService.newProduct());
   }
-   productSelected(product:IProduct):void{
+   
+  //when product's category is clicked
+  productSelected(product:IProduct):void{
     this.productService.changeSelectedProduct(product);
   }
 

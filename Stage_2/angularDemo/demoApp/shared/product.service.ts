@@ -16,11 +16,10 @@ export class ProductService{
  //BehaviorSubject --it will emit only the last value of the source observable
  //BehaviorSubject will ensure that every consumer get recent most value
  //selection --selected object from the list of values
-     private selectedProductSource= new BehaviorSubject<IProduct | null >(null);
+     private selectedProductSource = new BehaviorSubject<IProduct | null >(null);
 
  //conventionally you can put $ to the var if it is a Observable
-    selectedProductChanges$=this.selectedProductSource.asObservable();
-
+    selectedProductChanges$ = this.selectedProductSource.asObservable();
 
     private url='api/products/';
     products:IProduct[]=[];
@@ -47,12 +46,12 @@ export class ProductService{
       }
 
       
-changeSelectedProduct(selectedProduct:IProduct | null):void{
-    this.selectedProductSource.next(selectedProduct);
-    console.log(selectedProduct);
-    console.log(this.selectedProductChanges$);
-    console.log(this.selectedProductSource);
-}
+    changeSelectedProduct(selectedProduct:IProduct | null):void{
+        this.selectedProductSource.next(selectedProduct);
+        console.log(selectedProduct);
+        console.log(this.selectedProductChanges$);
+        console.log(this.selectedProductSource);
+    }
   
     //errorhandler which returns the Observable with errorMessage
     errorHandler=(err:any)=>{
