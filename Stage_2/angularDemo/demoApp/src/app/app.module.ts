@@ -15,7 +15,8 @@ import { RepeatDataPipe } from './repeat-data.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventListComponent } from './events-list/event-list.component';
-import { EventDetailComponent } from './event_detaiil/event-detail/event-detail.component';
+import { EventDetailComponent } from './events/event-detail.component';
+
 
 
 @NgModule({

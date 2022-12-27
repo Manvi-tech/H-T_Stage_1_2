@@ -38,7 +38,7 @@
         "date": "23/12/2022",
         "time":"08:30 am",
         "price":102,
-        "imageUrl":"../assets/images/dog2.jpg",
+        "imageUrl":"../assets/images/dog1.jpg",
         "location":{
             "address":"123",
             "city":"Delhi",
@@ -70,7 +70,7 @@
         "date": "23/12/2022",
         "time":"08:30 am",
         "price":102,
-        "imageUrl":"../assets/images/dog3.jpg",
+        "imageUrl":"../assets/images/dog1.jpg",
         "location":{
             "address":"123",
             "city":"Delhi",

@@ -1,7 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { IEvent } from "src/app/event_detaiil/event-detail/events";
+import { IEvent } from "src/app/events/events";
+
 
 @Injectable({
     providedIn:'root'
