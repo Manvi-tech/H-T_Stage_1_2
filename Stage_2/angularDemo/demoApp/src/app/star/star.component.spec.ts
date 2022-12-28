@@ -28,7 +28,7 @@ describe('StarComponent', () => {
         spyOn(component.ratingEventClicked,'emit');
 
         //getting the div with crop class
-        const div =fixture.nativeElement.querySelector('.crop');
+        const div = fixture.nativeElement.querySelector('.crop');
 
         //we are assigning new textcontent to #h1
         fixture.nativeElement.querySelector('#h1').textContent=
@@ -36,6 +36,7 @@ describe('StarComponent', () => {
 
         //we are creating inputText as a const and the value of #h1 textcontent
         const inputText = fixture.nativeElement.querySelector('#h1').textContent;
+      
         fixture.detectChanges();
 
         //simulating the div click

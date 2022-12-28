@@ -22,8 +22,10 @@ export class StarComponent implements OnInit, OnChanges{
   starsClicked():void{
     // console.log('inside stars click')
     // this.ratingEventClicked.emit(`Stars Clicked Has a Rating Of ${this.rating}`);
-    let msg =  document.querySelector('#h1')?.textContent ?? 'hello';
-    this.ratingEventClicked.emit(msg);
+
+    //testing output emitter
+      let msg =  document.querySelector('#h1')?.textContent ?? 'hello';
+      this.ratingEventClicked.emit(msg);
   }
 
 }
