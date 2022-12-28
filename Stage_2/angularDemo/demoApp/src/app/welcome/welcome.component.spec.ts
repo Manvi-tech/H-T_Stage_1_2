@@ -1,6 +1,7 @@
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { RepeatDataPipe } from '../repeat-data.pipe';
 
 import { WelcomeComponent } from './welcome.component';
 
@@ -11,11 +12,14 @@ describe('WelcomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WelcomeComponent ]
+      declarations: [ WelcomeComponent, RepeatDataPipe ]
     })
     .compileComponents();
 
+    //fixture: wrapper of ts and html file
     fixture = TestBed.createComponent(WelcomeComponent);
+
+    //give me ts reference: component instantiation
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
