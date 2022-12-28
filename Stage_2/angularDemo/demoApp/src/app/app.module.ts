@@ -20,6 +20,7 @@ import { InMemoryDbEventService } from '../../shared/inMemDbEventService';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductAddComponent } from './products/product-add.component';
 import { HomeComponentComponent } from './home/home-component.component';
+import { EmojiDirective } from './emoji.directive';
 
 
 
@@ -38,7 +39,8 @@ import { HomeComponentComponent } from './home/home-component.component';
     EventListComponent,
     EventDetailComponent,
     ProductAddComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    EmojiDirective
   ],
   imports: [
     FormsModule,
