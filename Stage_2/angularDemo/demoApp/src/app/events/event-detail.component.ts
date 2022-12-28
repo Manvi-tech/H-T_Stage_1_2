@@ -14,6 +14,8 @@ export class EventDetailComponent {
   
   constructor(private eventService:EventService){}
 
+  eventDetailMsg:string = 'eventDetailMsg';
+
   sub!:Subscription;
 
   ngOnInit(): void {

@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductAddComponent } from './product-add.component';
@@ -8,7 +9,8 @@ describe('ProductAddComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductAddComponent ]
+      declarations: [ ProductAddComponent ],
+      schemas:[NO_ERRORS_SCHEMA]
     })
     .compileComponents();
 

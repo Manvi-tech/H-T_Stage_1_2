@@ -10,8 +10,10 @@ import { IEvent } from '../events/events';
   styleUrls: ['./event-list.component.css']
 })
 
-
 export class EventListComponent{
 //getting events from parent component:event-detail
   @Input() eventsList:IEvent[]=[];
+
+  @Input() message:string='';
+  
 }

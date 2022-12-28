@@ -10,7 +10,7 @@ export class WelcomeComponent {
 
 
   constructor(private logService:LoggingService){};
-
+  pageTitle:string="title";
   data:number=3;
   msg:string='manvi';
   nums:number=0;

@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FlatListComponent } from './flat-list.component';
@@ -8,7 +9,8 @@ describe('FlatListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FlatListComponent ]
+      declarations: [ FlatListComponent ],
+      schemas:[NO_ERRORS_SCHEMA]
     })
     .compileComponents();
 
