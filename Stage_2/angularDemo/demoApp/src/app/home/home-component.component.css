@@ -1,0 +1,24 @@
+
+
+body{
+    padding-bottom: 20px;
+}
+
+h1{
+    color: blue;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-align: center;
+    background-color: lightpink;
+}
+
+#flexBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+

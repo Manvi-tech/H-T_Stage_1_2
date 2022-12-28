@@ -5,13 +5,13 @@ h1{
 }
 input{
     display: block;
-    margin: 30px 10px;
+    margin: 10px 10px;
 }
-.card{
+/* .card{
     display: inline-block;
     border: 1px solid black;
     margin: 10px;
-}
+} */
 table{
     background-color: rgb(212, 241, 250);
     text-align: center;
@@ -19,7 +19,7 @@ table{
     padding: 10px;
 }
 table img{
-    height: 100px;
+    height: 80px;
     width: 90px;
 } 
 

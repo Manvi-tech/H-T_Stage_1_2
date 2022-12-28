@@ -7,7 +7,7 @@ import { PentHouseComponent } from './pentHouse/pentHouse.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { StarComponent } from './star/star.component';
 import { CartListComponent } from './cart/cart-list.component';
@@ -18,6 +18,8 @@ import { EventListComponent } from './events-list/event-list.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { InMemoryDbEventService } from '../../shared/inMemDbEventService';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ProductAddComponent } from './products/product-add.component';
+import { HomeComponentComponent } from './home/home-component.component';
 
 
 
@@ -34,7 +36,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     RepeatDataPipe,
     NavbarComponent,
     EventListComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    ProductAddComponent,
+    HomeComponentComponent
   ],
   imports: [
     FormsModule,
@@ -42,6 +46,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDbEventService),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

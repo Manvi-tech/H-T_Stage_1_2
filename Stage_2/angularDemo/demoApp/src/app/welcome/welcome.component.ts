@@ -11,7 +11,8 @@ export class WelcomeComponent {
 
   constructor(private logService:LoggingService){};
 
-  msg:string="manvi ";
+  data:number=3;
+  msg:string='manvi';
   nums:number=0;
   logMsg:string='';
   

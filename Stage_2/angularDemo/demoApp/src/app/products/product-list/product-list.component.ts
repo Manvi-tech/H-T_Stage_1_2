@@ -1,4 +1,5 @@
 import { Component , EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { LoggingService } from 'shared/logging.service';
 import { ProductService } from 'shared/product.service';
@@ -11,7 +12,7 @@ import { Categories, IProduct } from './product';
 })
 export class ProductListComponent implements OnInit, OnDestroy{
 
-  constructor(private productService:ProductService, private logService:LoggingService){}
+  constructor(private productService:ProductService, private logService:LoggingService,private router:Router){}
   
   ngOnDestroy(): void {
     this.sub.unsubscribe();
@@ -130,6 +131,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
 
   newProduct():void{
     this.productService.changeSelectedProduct(this.productService.newProduct());
+    this.router.navigate(['/addProduct']);
   }
    
   //when product's category is clicked
@@ -137,8 +139,5 @@ export class ProductListComponent implements OnInit, OnDestroy{
     this.productService.changeSelectedProduct(product);
   }
 
-  addProduct():void{
-    console.log(this.productService.newProduct());
-  }
   
 }
