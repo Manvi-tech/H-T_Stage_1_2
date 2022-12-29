@@ -10,7 +10,7 @@ describe('RepeatDataPipe', () => {
   it('testing repeat pipe', () => {
     const pipe = new RepeatDataPipe();
     const data = pipe.transform("manvi",2);
-    expect(data).toEqual("manvi manvi");
+    expect(data).toEqual("manvimanvi");
   });
 
 });

@@ -36,7 +36,7 @@ describe('HomeComponentComponent', () => {
  
      const h1Element:HTMLElement = h1.nativeElement;
  
-     expect(h1Element.textContent).toEqual("title"); 
+     expect(h1Element.textContent).toEqual("new title"); 
    
   })
 

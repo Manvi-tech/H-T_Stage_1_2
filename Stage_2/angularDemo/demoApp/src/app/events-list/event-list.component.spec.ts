@@ -81,7 +81,7 @@ describe('EventListComponent', () => {
  
      const h1Element:HTMLElement = h1.nativeElement;
  
-     expect(h1Element.textContent).toEqual('hellopp'); 
+     expect(h1Element.textContent).toEqual('hello'); 
 
   });
   
