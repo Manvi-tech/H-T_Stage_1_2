@@ -21,6 +21,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductAddComponent } from './products/product-add.component';
 import { HomeComponentComponent } from './home/home-component.component';
 import { EmojiDirective } from './emoji.directive';
+import { TrusteeComponent } from './trustees/trustee.component';
 
 
 
@@ -40,7 +41,8 @@ import { EmojiDirective } from './emoji.directive';
     EventDetailComponent,
     ProductAddComponent,
     HomeComponentComponent,
-    EmojiDirective
+    EmojiDirective,
+    TrusteeComponent
   ],
   imports: [
     FormsModule,

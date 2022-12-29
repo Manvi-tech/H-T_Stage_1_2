@@ -1,0 +1,92 @@
+<!-- id!: number;
+name!:string;
+gender!: string;
+countryOfResidence!: string;  
+passport!: string;  
+issuanceDate!: string;
+noOfDependents!: number; -->
+
+<!-- template driven form -->
+<form #trusteeForm="ngForm" (ngSubmit)="onSubmit(trusteeForm)">
+
+    <div class="form-group">
+
+        <!-- id:number -->
+        <div class="mb-3">
+          <label for="trusteeId" class="form-label">Id</label>
+          <input #trusteeId="ngModel" type="number" class="form-control" id="trusteeId" 
+            required aria-describedby="emailHelp" name="trusteeId" ngModel>
+          
+            <div id="id" class="form-text" 
+            *ngIf="!trusteeId.valid && (trusteeId?.dirty || trusteeId?.touched)">
+            <!-- errors -->
+            <span class="error" *ngIf="trusteeId.errors?.['required']">Id is Required</span>
+          </div>
+
+        </div>
+       
+        <!-- name: string -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required #name="ngModel" ngModel minlength="3">
+          <div id="id" class="form-text"
+          *ngIf="!name.valid && (name?.dirty || name?.touched)">
+            <!-- errors -->
+            <span class="error" *ngIf="name.errors?.['required']">Name is Required</span>
+            <span class="error" *ngIf="name.errors?.['minlength']">min length is 3</span>
+          </div>
+        </div>
+       
+        <!-- gender: radio -->
+        <div class="form-check mb-3">
+            <div>
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male" aria-label="...">Male
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" name="gender" id="Female" value="female" aria-label="...">Female
+            </div>
+        </div>
+       
+
+        <!-- passport : string -->
+        <div class="mb-3">
+            <label for="passport" class="form-label">Passport</label>
+            <input type="text" class="form-control" name="passport" id="passport" required #passport="ngModel" minlength="10" maxlength="10" ngModel>
+            <div id="id" class="form-text"
+                *ngIf="!passport.valid && (passport?.dirty || passport?.touched)">
+                <!-- errors -->
+                <span class="error" *ngIf="passport.errors?.['required']">Passport is Required</span>
+
+                <span class="error" 
+                    *ngIf="passport.errors?.['minlength'] || passport.errors?.['maxlength']">
+                    Passport Length should be 10
+                </span>
+            </div>
+        </div>
+
+        <!-- issuance date: date -->
+        <div class="mb-3">
+            <label for="issuanceDate" class="form-label">Issuance Date</label>
+            <input type="date" class="form-control" name="issuanceDate" id="issuanceDate" #issuanceDate="ngModel" ngModel>
+        </div>
+
+        <!-- dependenets : number -->
+        <div class="mb-3">
+            <label for="noOfDependents" class="form-label">noOfDependents</label>
+            <input type="number" name="noOfDependents" class="form-control" id="noOfDependents" 
+                #noOfDependents="ngModel" ngModel aria-describedby="emailHelp" required>
+            <div id="id" class="form-text"
+            *ngIf="!trusteeId.valid && (trusteeId?.dirty || trusteeId?.touched)">
+            <!-- errors -->
+            <span class="error" *ngIf="noOfDependents.errors?.['required']">
+                noOfDependents is Required</span>
+            </div>
+        </div>
+        
+        <button type="submit" [disabled]="!trusteeForm.valid" class="btn btn-primary">Submit</button>
+
+    </div>
+
+    
+</form>
+
