@@ -7,9 +7,12 @@ issuanceDate!: string;
 noOfDependents!: number; -->
 
 <!-- template driven form -->
+
 <form #trusteeForm="ngForm" (ngSubmit)="onSubmit(trusteeForm)">
 
     <div class="form-group">
+
+        <h1 class="text-center">Template Driven Trustee form</h1>
 
         <!-- id:number -->
         <div class="mb-3">
@@ -39,11 +42,17 @@ noOfDependents!: number; -->
        
         <!-- gender: radio -->
         <div class="form-check mb-3">
+
+            <label for="gender" class="form-label" style="margin-left: -25px;">Gender</label>
+
             <div>
-                <input class="form-check-input" type="radio" name="gender" id="male" value="male" aria-label="...">Male
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male" aria-label="..." #gender="ngModel" ngModel>Male
             </div>
             <div>
-                <input class="form-check-input" type="radio" name="gender" id="Female" value="female" aria-label="...">Female
+                <input class="form-check-input" type="radio" name="gender" id="Female" value="female" aria-label="..." #gender="ngModel" ngModel>Female
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" name="gender" id="other" value="other" aria-label="..." #gender="ngModel" ngModel>Other
             </div>
         </div>
        
@@ -84,6 +93,8 @@ noOfDependents!: number; -->
         </div>
         
         <button type="submit" [disabled]="!trusteeForm.valid" class="btn btn-primary">Submit</button>
+
+        <button class="btn btn-danger" (click)="resetForm(trusteeForm)">Reset</button>
 
     </div>
 
