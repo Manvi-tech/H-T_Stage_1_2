@@ -12,3 +12,8 @@
 .navbar-collapse ul li a{
     color: white;
 }
+
+.activeLink{
+    border-bottom:1px solid whitesmoke ;
+    color: palevioletred;
+}

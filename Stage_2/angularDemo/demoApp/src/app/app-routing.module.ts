@@ -2,20 +2,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { BookComponent } from './books/book.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { HomeComponentComponent } from './home/home-component.component';
-import { ProductAddComponent } from './products/product-add.component';
+import { TrusteeComponent } from './trustees/trustee.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
-//created  a Routes array
-//Routes
-//[ { path , component},
-//{  path , component , } ]
 const routes: Routes = [
-  {path:'events/:id',component:EventDetailComponent},
-  {path:'addProduct',component:ProductAddComponent},
-  {path:'',pathMatch:'full' ,component:HomeComponentComponent}]
-  // {path:'',pathMatch:'full' ,component:AppComponent}]
+  // {path:'events/:id',component:EventDetailComponent},
+  // {path:'addProduct',component:ProductAddComponent},
+  {path:'welcome',pathMatch:'full' ,component:WelcomeComponent},
+  {path:'events',component:EventDetailComponent},
+  {path:'books',component:BookComponent},
+  {path:'trustees', component:TrusteeComponent},
+  {path:'',pathMatch:'full' ,component:HomeComponentComponent}
+]
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
