@@ -24,6 +24,7 @@ import { EmojiDirective } from './emoji.directive';
 import { TrusteeComponent } from './trustees/trustee.component';
 import { BookComponent } from './books/book.component';
 import { EmployeeArrayComponent } from './employees/employees-array.component';
+import { AnimalImgComponent } from './animals/animal-img.component';
  
 
 @NgModule({
@@ -46,6 +47,7 @@ import { EmployeeArrayComponent } from './employees/employees-array.component';
     TrusteeComponent,
     BookComponent,
     EmployeeArrayComponent,
+    AnimalImgComponent,
     
   ],
   imports: [

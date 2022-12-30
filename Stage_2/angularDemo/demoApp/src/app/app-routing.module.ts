@@ -1,6 +1,8 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnimalImgComponent } from './animals/animal-img.component';
+import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 import { AppComponent } from './app.component';
 import { BookComponent } from './books/book.component';
 import { EventDetailComponent } from './events/event-detail.component';
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'events',component:EventDetailComponent},
   {path:'books',component:BookComponent},
   {path:'trustees', component:TrusteeComponent},
+  {path:'animals', component:AnimalListComponent},
+  {path:'animals/:id',component:AnimalImgComponent},
   {path:'',pathMatch:'full' ,component:HomeComponentComponent}
 ]
  

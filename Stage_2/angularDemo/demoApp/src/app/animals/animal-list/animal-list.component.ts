@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IAnimal } from './animal';
 
 @Component({
   selector: 'app-animal-list',
@@ -14,7 +15,7 @@ export class AnimalListComponent {
     this.showIamge = !this.showIamge;
   }
 
-  animals:any[] = [
+  animals:IAnimal[] = [
     {
       id: 101,
       name:"Snoppy",
