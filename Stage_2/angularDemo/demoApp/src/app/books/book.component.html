@@ -1,6 +1,7 @@
 
 <form style="width: 60%; margin: auto;" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
 
+    
     <h1 class="text-center">Reactive Book Form</h1>
 
     <div class="form-group">
@@ -53,6 +54,7 @@
                 </div>
             </div>
 
+            <!-- email -->
             <p>
                 <label for="state">Email</label>
                 <input class="form-control" type="email" name="state" id="state" formControlName="email">
@@ -65,6 +67,18 @@
               </div>
             </div>
 
+            <!-- publishers -->
+            <div formArrayName="publishers">
+                <div *ngFor="let publisher of publishers().controls; let publisherIndex=index">
+                  <div [formGroupName]="publisherIndex">
+                     {{publisherIndex}} Publishers:
+                    <input type="text" name="name" id="name" placeholder="Name" formControlName="name">
+                    <input type="tel" name="phn" id="phn" placeholder="Phone Number" formControlName="phn">
+                    <button (click)="removePublisher(publisherIndex)">Remove Publisher</button>
+                  </div>
+                </div>     
+            </div>      
+            <button type="button" (click)="addPublisher()">Add Publisher</button>
         </div>
 
         <button type="reset" class="btn btn-danger">Reset</button>

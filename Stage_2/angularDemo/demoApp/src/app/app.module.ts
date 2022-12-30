@@ -23,7 +23,8 @@ import { HomeComponentComponent } from './home/home-component.component';
 import { EmojiDirective } from './emoji.directive';
 import { TrusteeComponent } from './trustees/trustee.component';
 import { BookComponent } from './books/book.component';
-
+import { EmployeeArrayComponent } from './employees/employees-array.component';
+ 
 
 @NgModule({
   declarations: [
@@ -44,6 +45,8 @@ import { BookComponent } from './books/book.component';
     EmojiDirective,
     TrusteeComponent,
     BookComponent,
+    EmployeeArrayComponent,
+    
   ],
   imports: [
     FormsModule,
