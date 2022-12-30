@@ -7,7 +7,7 @@ issuanceDate!: string;
 noOfDependents!: number; -->
 
 <!-- template driven form -->
-
+<!-- #trusteeForm="ngForm": this is used to create instance of FormGroup and binds it to trusteeForm -->
 <form #trusteeForm="ngForm" (ngSubmit)="onSubmit(trusteeForm)">
 
     <div class="form-group">
@@ -19,6 +19,12 @@ noOfDependents!: number; -->
           <label for="trusteeId" class="form-label">Id</label>
           <input #trusteeId="ngModel" type="number" class="form-control" id="trusteeId" 
             required aria-describedby="emailHelp" name="trusteeId" ngModel>
+            <!-- ngModel: 
+                        used to register child controls with form or
+                        used to bind this as control in trusteeForm(FormGroup instance) 
+                        under the name trusteeId -->
+            <!-- #trusteeId="ngModel: 
+                this template refernce variable is used to handle error valdations-->
           
             <div id="id" class="form-text" 
             *ngIf="!trusteeId.valid && (trusteeId?.dirty || trusteeId?.touched)">
@@ -31,12 +37,12 @@ noOfDependents!: number; -->
         <!-- name: string -->
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="name" required #name="ngModel" ngModel minlength="3">
+          <input type="text" class="form-control" id="name" name="name" required #userName="ngModel" ngModel minlength="3">
           <div id="id" class="form-text"
-          *ngIf="!name.valid && (name?.dirty || name?.touched)">
+          *ngIf="!userName.valid && (userName?.dirty || userName?.touched)">
             <!-- errors -->
-            <span class="error" *ngIf="name.errors?.['required']">Name is Required</span>
-            <span class="error" *ngIf="name.errors?.['minlength']">min length is 3</span>
+            <span class="error" *ngIf="userName.errors?.['required']">Name is Required</span>
+            <span class="error" *ngIf="userName.errors?.['minlength']">min length is 3</span>
           </div>
         </div>
        
@@ -54,6 +60,15 @@ noOfDependents!: number; -->
             <div>
                 <input class="form-check-input" type="radio" name="gender" id="other" value="other" aria-label="..." #gender="ngModel" ngModel>Other
             </div>
+        </div>
+
+        <!-- country: dropdown -->
+        <div class="mb-3">
+            <label for="country">Country</label>
+            <select #country="ngModel" name="country" id="country" required ngModel>
+                <option [ngValue]="c.name" *ngFor="let c of countries">{{c.name}}</option>
+            </select>
+        
         </div>
        
 

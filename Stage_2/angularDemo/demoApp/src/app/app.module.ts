@@ -7,7 +7,7 @@ import { PentHouseComponent } from './pentHouse/pentHouse.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { StarComponent } from './star/star.component';
 import { CartListComponent } from './cart/cart-list.component';
@@ -42,7 +42,7 @@ import { TrusteeComponent } from './trustees/trustee.component';
     ProductAddComponent,
     HomeComponentComponent,
     EmojiDirective,
-    TrusteeComponent
+    TrusteeComponent,
   ],
   imports: [
     FormsModule,

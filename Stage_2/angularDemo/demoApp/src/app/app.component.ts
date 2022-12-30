@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 
-import { IProduct } from "./products/product-list/product";
 
 @Component({
   selector:'app',
