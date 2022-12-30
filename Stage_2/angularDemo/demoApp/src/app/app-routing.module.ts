@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './books/book.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { HomeComponentComponent } from './home/home-component.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
 import { TrusteeComponent } from './trustees/trustee.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
