@@ -47,7 +47,23 @@ export class AnimalService{
     }
 
     // getAnimalById(id:number): any{
-    //     Observable<any[]> o = this.http.get<any[]>(this.url);
+    //     animal:IAnimal[] = this.getAnimals();
     // }
+    // getProductById(id:number):Observable<IProduct>{
+    //     return this.getProducts().pipe(
+    //       tap(()=>{console.log('fetch product'+id);
+    //        this.foundIndex =this.products.findIndex(item=>item.id ==id);
+    //       if(this.foundIndex > -1){
+    //         this.products[this.foundIndex];
+    //           }
+    //       }),
+    //       map(()=>this.products[this.foundIndex]),
+    //       catchError(this.errorHandler)
+    //       );
+    
+    
+    
+    
+    //    }
     
 }
