@@ -1,0 +1,7 @@
+
+input{
+    box-shadow: none;
+}
+input.ng-dirty.ng-invalid{
+    border-color: red;
+}
