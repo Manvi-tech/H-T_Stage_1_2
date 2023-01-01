@@ -4,21 +4,42 @@
 
     <!-- ngForm wll create object of FormGroup for userForm -->
     <form #userForm="ngForm" (ngSubmit)="createUser(userForm)">
-      <div class="form-group my-3">
-        <!-- email -->
-        <label for="email">Email </label>
-        <input
-          type="text"
-          id="email"
-          class="form-control"
-          name="email"
-          ngModel
-          required email
-        />
-        <span class="help-text" 
-            *ngIf="userForm.controls['email']?.dirty  && !userForm.controls['email'].valid">
-            invalid email
-        </span>
+      <!-- ngModelGroup will club username and email under user -->
+      <div ngModelGroup="user" #user="ngModelGroup">
+        <div class="form-group my-3">
+          <!-- email -->
+          <label for="email">Email </label>
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            name="email"
+            ngModel
+            required email
+          />
+          <span class="help-text" 
+              *ngIf="userForm.controls['email']?.dirty  && !userForm.controls['email'].valid">
+              invalid email
+          </span>
+        </div>
+
+        <div class="form-group my-3">
+          <!-- username -->
+          <label for="username">Username </label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            name="username"
+            ngModel
+            required
+          />
+          <span class="help-text" 
+              *ngIf="userForm.controls['username']?.touched  && 
+                      userForm.controls['username'].errors?.['required']">
+               username is required *
+          </span>
+        </div>
       </div>
 
       <!-- password -->
@@ -53,5 +74,8 @@
       <button class="btn btn-danger mx-3" (click)="resetForm()">Reset</button>
 
     </form>
+
+   
+
   </div>
 </div>
