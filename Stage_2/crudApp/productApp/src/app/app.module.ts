@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { ProductAddComponent } from './products/product-add.component';
 import { HomeComponent } from './Home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDbEventService } from 'shared/inMemDbEventService';
@@ -23,6 +23,7 @@ import { InMemoryDbEventService } from 'shared/inMemDbEventService';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDbEventService)
   ],
   providers: [],

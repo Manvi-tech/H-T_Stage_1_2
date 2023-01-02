@@ -15,9 +15,12 @@ export class ProductListComponent implements OnInit, OnDestroy{
 
   sub !:Subscription;
   products: IProduct[]=[];
+  href:string='';
+
+  selectedProduct!:IProduct | null;
 
   ngOnInit(): void {
-    // this.href=this.router.url;
+    this.href=this.router.url;
     // console.log(this.href);
     //sub object is initialized
        this.sub =this.productService.getProducts().subscribe((response)=>{
@@ -31,14 +34,24 @@ export class ProductListComponent implements OnInit, OnDestroy{
        }
        );
 
-      //  this.productService.selectedProductChanges$.
-      //  subscribe(currentProduct=>{this.selectedProduct=currentProduct;
-      //  console.log(this.selectedProduct);
-      //  });
+       this.productService.selectedProductChanges$.
+       subscribe(currentProduct=>{
+          this.selectedProduct = currentProduct;
+          console.log(this.selectedProduct);
+       });
 
      }
 
+     newProduct():void{
+      console.log('in new product');
+    
+      this.productService.changeSelectedProduct(this.productService.newProduct());
+      console.log('back to newProduct from service ');
+    
+       this.router.navigate([this.href,'addProduct']);
+    }
+
      ngOnDestroy(): void {
         this.sub.unsubscribe();
-      }
+     }
 }
