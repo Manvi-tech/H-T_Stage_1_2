@@ -142,7 +142,7 @@ get rating(){
         }
       }
 
-      this.router.navigate(['products'])
+      // this.router.navigate(['products'])
     }
   }
 
@@ -152,19 +152,19 @@ get rating(){
   
     }
   
-    deleteProduct(prod:IProduct):void{
-      if(prod && prod.id){
-        if(confirm(`Are you sure you want to delete ${prod.name} details`)){
-          this.productService.deleteProduct(prod.id).subscribe(
-            resp=>this.productService.changeSelectedProduct(null),
-            err=>this.errorMessage=err
-          );
-        }
-        else{
-          //no need to delete the product
-          this.productService.changeSelectedProduct(null)
-        }
+  deleteProduct(prod:IProduct):void{
+    if(prod && prod.id){
+      if(confirm(`Are you sure you want to delete ${prod.name} details`)){
+        this.productService.deleteProduct(prod.id).subscribe(
+          resp=>this.productService.changeSelectedProduct(null),
+          err=>this.errorMessage=err
+        );
       }
-  
+      else{
+        //no need to delete the product
+        this.productService.changeSelectedProduct(null)
+      }
     }
+
+  }
 }

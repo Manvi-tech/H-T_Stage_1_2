@@ -47,7 +47,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
     
       this.productService.changeSelectedProduct(this.productService.newProduct());
       console.log('back to newProduct from service ');
-    
+        console.log(this.href);
        this.router.navigate([this.href,'addProduct']);
     }
 
