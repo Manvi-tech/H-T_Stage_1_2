@@ -10,7 +10,18 @@
 
 -->
 
-<app-r-form></app-r-form>
+<header>
+
+    <a routerLink="/"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="/tdform"  routerLinkActive="active">TemplateForm</a>
+    <a [routerLink]="['/rform']" routerLinkActive="active">ReactiveForm</a>
+
+</header>
+
+<router-outlet></router-outlet>
+
+
+<!-- <app-r-form></app-r-form> -->
 
 <!-- <app-td-form></app-td-form> -->
 

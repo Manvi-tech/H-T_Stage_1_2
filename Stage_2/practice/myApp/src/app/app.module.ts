@@ -9,6 +9,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { TdFormComponent } from './templateDrivenForm/td-form.component';
 import { RFormComponent } from './reactiveForm/r-form.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RFormComponent } from './reactiveForm/r-form.component';
     ProductListComponent,
     CartListComponent,
     TdFormComponent,
-    RFormComponent
+    RFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

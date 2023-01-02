@@ -1,0 +1,21 @@
+
+<div class="text-center">
+    
+    <h1>Home Page</h1>
+
+    <button (click)="navigate()" class="btn btn-primary mx-3 my-3">Navigate</button>
+
+    <button (click)="navigateByUrl()" class="btn btn-primary mx-3 my-3">Navigate ByUrl</button>
+
+    <!-- <a routerLink="users/2/manvi" class="mx-3">activatedRoute</a> -->
+    
+    <a [routerLink]="['/users','2','manvi']" class="mx-3">activatedRoute2</a>
+
+    <a [routerLink]="['/users','3','ivnam']">activatedRoute2</a>
+</div>
+
+<div class="text-center">
+   {{user.id}} <br>
+   {{user.name}}
+</div>
+
