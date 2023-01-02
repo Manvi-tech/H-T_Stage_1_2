@@ -22,9 +22,9 @@ export class InMemoryDbEventService implements InMemoryDbService {
                 "category":Category.fruits,
         
                 "price":180,
-                "image":"../../assets/images/apple.jpg",
+                "image":"../../assets/images/dog1.jpg",
                 "rating":3.5,
-                "qty":0
+                "qty":2
                },
               {
         
@@ -32,9 +32,9 @@ export class InMemoryDbEventService implements InMemoryDbService {
                 "name":"tomato",
                 "category":Category.vegetables,
                 "price":340,
-                "image":"../../assets/images/tomato.jpg",
+                "image":"../../assets/images/dog1.jpg",
                 "rating":2,
-                "qty":0
+                "qty":1
             }
         ]
         
