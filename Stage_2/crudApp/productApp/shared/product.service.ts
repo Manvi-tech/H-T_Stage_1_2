@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class ProductService{
 
-    private url="api/products";
+    private url="api/products/";
     products !: IProduct[];
 
     //why are we passing http in the constructor as an argument

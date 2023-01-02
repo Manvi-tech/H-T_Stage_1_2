@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ProductService } from 'src/shared/product.service';
+import { ProductService } from 'shared/product.service';
 import { IProduct } from './product';
 
 @Component({
@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   constructor(private productService:ProductService,private router:Router){ }
 
   sub !:Subscription;
-  products !: IProduct[];
+  products: IProduct[]=[];
 
   ngOnInit(): void {
     // this.href=this.router.url;
