@@ -28,14 +28,15 @@ export class ProductService{
     //get method is a generic method IProduct[]
     //arguments u are passing this.url api/products --- api
     //pipe -- operator in rxjs  where you ca
-    return this.http.get<IProduct[]>(this.url).pipe(
+      return this.http.get<IProduct[]>(this.url).pipe(
 
-        tap(data=>{console.log(data);
-          //we are assigning data to this.products
-          this.products = data;
-    })
-        // catchError(this.errorHandler)
-    );
+        tap(data=>{
+            console.log(data);
+            //we are assigning data to this.products
+            this.products = data;
+          })
+          // catchError(this.errorHandler)
+      );
 
-  }
+    }
 }
