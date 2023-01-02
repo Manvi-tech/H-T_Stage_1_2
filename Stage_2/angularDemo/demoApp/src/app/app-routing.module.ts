@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './books/book.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { HomeComponentComponent } from './home/home-component.component';
+import { ProductAddComponent } from './products/product-add.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { TrusteeComponent } from './trustees/trustee.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -14,7 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   // {path:'events/:id',component:EventDetailComponent},
-  // {path:'addProduct',component:ProductAddComponent},
+  {path:'addProduct',component:ProductAddComponent},
   {path:'welcome',pathMatch:'full' ,component:WelcomeComponent},
   {path:'events',component:EventDetailComponent},
   {path:'books',component:BookComponent},

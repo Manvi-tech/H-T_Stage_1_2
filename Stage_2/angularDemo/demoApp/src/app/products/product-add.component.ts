@@ -18,10 +18,42 @@ export class ProductAddComponent implements OnInit {
   ngOnInit() {
     this.addProduct = this.formBuilder.group({
       id: [],
-      name: ['', Validators.required],
-
+      name: ['', [Validators.required]],
+      category:['all', [Validators.required]],
+      price:[1, [Validators.required,Validators.min(1)]],
+      quantity:[1, [Validators.required,Validators.min(1)]],
+      image:['Product Image'],
+      rating:[3, [Validators.required, Validators.min(1), Validators.max(5)]]
     });
 
+  }
+
+  get id(){
+    return this.addProduct.get('id');
+  }
+
+  get name(){
+    return this.addProduct.get('name');
+  }
+
+  get price(){
+    return this.addProduct.get('price');
+  }
+
+  get rating(){
+    return this.addProduct.get('rating');
+  }
+
+  get category(){
+    return this.addProduct.get('category');
+  }
+
+  get quantity(){
+    return this.addProduct.get('quantity');
+  }
+  
+  get image(){
+    return this.addProduct.get('image');
   }
 
   onSubmit() {
