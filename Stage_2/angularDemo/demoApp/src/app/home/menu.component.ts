@@ -1,5 +1,6 @@
-import { AfterContentChecked, AfterContentInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges, TemplateRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { GreetingComponent } from '../greeting/greeting.component';
 import { AuthService } from '../user/auth.service';
 
 @Component({
@@ -27,7 +28,27 @@ export class MenuComponent implements OnInit, OnDestroy, OnChanges, AfterContent
 
     return '';
   }
+
+  logOut(): void {
+    //this should also use the authserviceto logout the current user
+    //you can route to some url
+    this.authservice.logOut();
+    this.router.navigate(['/welcome']);
+  }
+
+  @ViewChild(GreetingComponent)greetingc!:GreetingComponent;
+  //how to access ref1 template reference variable in component
+
+  //template ref var in menu html: #ref1
+  @ViewChild('ref1',{read:TemplateRef})ref1!: TemplateRef<any>;
+
   constructor(private router: Router, private authservice: AuthService) {}
+
+  greet():void{
+    //calling child component's grret method
+    console.log(this.greetingc.displayMessage());
+    this.pageTitle=this.greetingc.displayMessage();
+  }
 
   ngOnDestroy(): void {
     console.log('greeting destroyed');}
@@ -60,10 +81,5 @@ export class MenuComponent implements OnInit, OnDestroy, OnChanges, AfterContent
     console.log('greeting view checked');
 
    }
-  logOut(): void {
-    //this should also use the authserviceto logout the current user
-    //you can route to some url
-    this.authservice.logOut();
-    this.router.navigate(['/welcome']);
-  }
+  
 }
