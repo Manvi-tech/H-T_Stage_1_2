@@ -24,9 +24,7 @@ const routes: Routes = [
   {path:'events',component:EventDetailComponent},
   {path:'books',component:BookComponent},
   {path:'trustees', component:TrusteeComponent},
-  {path:'animals', component:AnimalListComponent,
-    canActivate:[AuthGuard]
-  },
+  {path:'animals', component:AnimalListComponent},
   {path:'animals/:id',component:AnimalImgComponent},
   // {path:'' ,component:HomeComponentComponent,
   //   children:[{path:'addProduct', component:ProductAddComponent}],
@@ -39,6 +37,7 @@ const routes: Routes = [
   {
     path:'products',
     component:ProductComponent,
+    canActivate: [AuthGuard],
     children:[{path:'addProduct',component:ProductAddComponent}]
   },
 ]
