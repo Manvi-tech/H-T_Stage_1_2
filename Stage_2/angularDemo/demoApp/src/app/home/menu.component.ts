@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../user/auth.service';
 
@@ -7,7 +7,9 @@ import { AuthService } from '../user/auth.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit, AfterContentChecked
+{
+  
   pageTitle: string = 'Online Shopping';
 
   get isLoggedIn(): boolean {
@@ -27,8 +29,37 @@ export class MenuComponent {
   }
   constructor(private router: Router, private authservice: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnDestroy(): void {
+    console.log('greeting destroyed');}
 
+    ngOnInit(): void {
+      console.log('greeting in oninit');
+    }
+    ngOnChanges():void{
+     console.log('greeting component changes');
+    }
+
+    ngDoCheck(){
+      console.log('doCheck of greeting');
+    }
+
+    ngAfterContentInit(){
+
+      console.log('greeting content init');
+
+    }
+    ngAfterContentChecked(){
+      console.log('greeting content checked');
+    }
+    ngAfterViewInit(){
+      console.log('greeting view init');
+
+    }
+
+   ngAfterViewChecked(){
+    console.log('greeting view checked');
+
+   }
   logOut(): void {
     //this should also use the authserviceto logout the current user
     //you can route to some url
