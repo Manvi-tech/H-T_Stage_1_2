@@ -10,21 +10,21 @@ export class HomeComponentComponent {
 
   pageTitle:string = 'my angular app';
 
-  cartProducts:IProduct[]=[];
+  // cartProducts:IProduct[]=[];
 
-  receiveEmittedProduct(obj:IProduct){
-      // console.log(JSON.stringify(obj));
-      let index = this.cartProducts.findIndex((prod)=>prod.id === obj.id);
+  // receiveEmittedProduct(obj:IProduct){
+  //     // console.log(JSON.stringify(obj));
+  //     let index = this.cartProducts.findIndex((prod)=>prod.id === obj.id);
      
-      if(index==-1){
-        this.cartProducts=[...this.cartProducts,obj];
-      }else{
-        this.cartProducts[index].quantity = obj.quantity;
-      }
+  //     if(index==-1){
+  //       this.cartProducts=[...this.cartProducts,obj];
+  //     }else{
+  //       this.cartProducts[index].quantity = obj.quantity;
+  //     }
       
-      //products with quantity=0 are removed
-      this.cartProducts = this.cartProducts.filter((prod)=>prod.quantity !==0)
+  //     //products with quantity=0 are removed
+  //     this.cartProducts = this.cartProducts.filter((prod)=>prod.quantity !==0)
 
-  }
+  // }
   
 }

@@ -28,6 +28,7 @@ import { AnimalImgComponent } from './animals/animal-img.component';
 import { MenuComponent } from './home/menu.component';
 import { LoginComponent } from './user/login.component';
 import { ShellComponent } from './home/shell.component';
+import { ProductComponent } from './products/display/product.component';
  
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ShellComponent } from './home/shell.component';
     MenuComponent,
     LoginComponent,
     ShellComponent,
+    ProductComponent,
     
   ],
   imports: [
