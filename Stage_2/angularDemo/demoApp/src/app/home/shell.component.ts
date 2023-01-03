@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./shell.component.css']
 })
 export class ShellComponent {
-
+  msg:string='hello there'
+  constructor() { }
 }

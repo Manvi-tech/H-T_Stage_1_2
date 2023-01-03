@@ -37,7 +37,7 @@ const routes: Routes = [
   {
     path:'products',
     component:ProductComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     children:[{path:'addProduct',component:ProductAddComponent}]
   },
 ]

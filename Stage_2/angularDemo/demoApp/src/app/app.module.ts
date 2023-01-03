@@ -29,6 +29,7 @@ import { MenuComponent } from './home/menu.component';
 import { LoginComponent } from './user/login.component';
 import { ShellComponent } from './home/shell.component';
 import { ProductComponent } from './products/display/product.component';
+import { GreetingComponent } from './greeting/greeting.component';
  
 
 @NgModule({
@@ -56,6 +57,7 @@ import { ProductComponent } from './products/display/product.component';
     LoginComponent,
     ShellComponent,
     ProductComponent,
+    GreetingComponent,
     
   ],
   imports: [

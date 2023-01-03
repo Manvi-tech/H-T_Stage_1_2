@@ -30,7 +30,6 @@ export class ProductAddComponent implements OnInit {
     private productService: ProductService
   ){
     this.validationMessages={
-
         name:{
           required:'Product name is required ',
           minLength:'Product name must have 3 characters',
@@ -62,7 +61,6 @@ export class ProductAddComponent implements OnInit {
     });
 
      //when the product is selected from the product list , it should be displayed on the form
-
      this.sub=this.productService.selectedProductChanges$.subscribe(selProd=>this.displayProduct(selProd));
 
      this.addProduct.valueChanges.
@@ -72,27 +70,21 @@ export class ProductAddComponent implements OnInit {
   get id() {
     return this.addProduct.get('id');
   }
-
   get name() {
     return this.addProduct.get('name');
   }
-
   get price() {
     return this.addProduct.get('price');
   }
-
   get rating() {
     return this.addProduct.get('rating');
   }
-
   get category() {
     return this.addProduct.get('category');
   }
-
   get quantity() {
     return this.addProduct.get('quantity');
   }
-
   get image() {
     return this.addProduct.get('image');
   }
