@@ -50,12 +50,14 @@
                 displayProducts
             </button> -->
 
-            <button class="btn btn-primary" (click)="newProduct()">Add Product</button>
+            <button class="btn btn-primary" (click)="newProduct()" [routerLink]="['addProduct']">
+                Add Product
+            </button>
         </div>
     </div> 
 </div>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
 
 

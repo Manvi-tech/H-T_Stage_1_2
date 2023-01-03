@@ -139,7 +139,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
 
   newProduct():void{
     this.productService.changeSelectedProduct(this.productService.newProduct());
-    this.router.navigate(['/addProduct']);
+    // this.router.navigate(['addProduct']);
   }
    
   //when product's category is clicked
