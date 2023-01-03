@@ -23,6 +23,10 @@ const routes: Routes = [
   {path:'animals', component:AnimalListComponent},
   {path:'animals/:id',component:AnimalImgComponent},
   {path:'',pathMatch:'full' ,component:HomeComponentComponent}
+  // {path:'products',component:ProductListComponent,
+  //   canActivate:[AuthGuard],
+  //   children:[{path:'addProduct', component:ProductAddComponent}]
+  // }
 ]
  
 @NgModule({

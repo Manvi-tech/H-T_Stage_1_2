@@ -26,6 +26,8 @@ import { BookComponent } from './books/book.component';
 import { EmployeeArrayComponent } from './employees/employees-array.component';
 import { AnimalImgComponent } from './animals/animal-img.component';
 import { MenuComponent } from './home/menu.component';
+import { LoginComponent } from './user/login.component';
+import { ShellComponent } from './home/shell.component';
  
 
 @NgModule({
@@ -50,6 +52,8 @@ import { MenuComponent } from './home/menu.component';
     EmployeeArrayComponent,
     AnimalImgComponent,
     MenuComponent,
+    LoginComponent,
+    ShellComponent,
     
   ],
   imports: [
