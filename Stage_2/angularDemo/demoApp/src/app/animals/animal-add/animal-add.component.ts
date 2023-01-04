@@ -92,8 +92,38 @@ export class AnimalAddComponent implements OnInit{
 
   }
 
-  saveAnimal(animal:any){
+  // on submit of add animal form 
+  saveAnimal(originalAnimal:any){
+    if (this.addAnimal.valid) {
+      if (this.addAnimal.dirty) {
+        //copy over all of the orginal product properties
+        //we arecopying data from teh addform
+        //{...} it ensures that values are not lost ids are retained
+        const animal = { ...originalAnimal, ...this.addAnimal.value};
 
+        if (animal.id == 0) {
+          // new animal creation
+          animal.imageUrl ='../../assets/images/dog3.jpg';
+          this.animalService.createAnimal(animal).subscribe(
+            (resp) => {
+              this.animalService.changeSelectedAnimal(resp);
+              console.log(resp);
+            },
+            (err) => (this.errorMessage = err)
+          );
+        } 
+        
+        // else {
+        //   //updating existing animal
+        //   this.animalService.updateAnimal(product).subscribe(
+        //     (resp) => this.animalService.changeSelectedAnimal(resp),
+        //     (err) => (this.errorMessage = err)
+        //   );
+        // }
+      }
+
+      this.router.navigate(['animals']);
+    }
   }
 
 }

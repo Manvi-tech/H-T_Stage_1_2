@@ -30,13 +30,14 @@
         <!-- image -->
         <div class="form-group  my-3">
           <label for="imageUrl">Image:</label>
-          <input type="text" formControlName="imageUrl" placeholder="Product Image" name="imageUrl" class="form-control" id="imageUrl" (blur)="blur()">
+          <input type="text" formControlName="imageUrl" placeholder="Animal Image" name="imageUrl" class="form-control" id="imageUrl" (blur)="blur()">
         </div>
   
         <!-- <button class="btn btn-danger" type="button"
         (click)="deleteAnmal(animal)">Delete Product</button> -->
         
-        <button [disabled]='!addAnimal.valid || !addAnimal.dirty' class="btn btn-success">
+        <button [disabled]='!addAnimal.valid || !addAnimal.dirty' 
+            class="btn btn-success">
             Save Product
         </button>
         

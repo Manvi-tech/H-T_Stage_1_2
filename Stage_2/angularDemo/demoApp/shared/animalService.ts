@@ -1,32 +1,7 @@
 
-// animals:any[] = [
-//     {
-//       id: 101,
-//       name:"Snoppy",
-//       age:2,
-//       description:'white bulldog',
-//       imageUrl:'../../assets/images/dog3.jpg'
-//     },
-//     {
-//       id: 102,
-//       name:"Leo",
-//       age:6,
-//       description:'brown german shephard',
-//       imageUrl:'../../assets/images/dog2.jpg'
-//     },
-//     {
-//       id: 103,
-//       name:"Tuffy",
-//       age:4,
-//       description:'black labrador',
-//       imageUrl:'../../assets/images/dog1.jpg'
-//     }
-
-//   ];
-
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable, tap } from "rxjs";
+import { BehaviorSubject, catchError, Observable, tap, throwError } from "rxjs";
 import { IAnimal } from "src/app/animals/animal-list/animal";
 import { IEvent } from "src/app/events/events";
 
@@ -48,9 +23,8 @@ export class AnimalService{
             tap((data) => {
               console.log(data);
               this.animals = data;
-            })
-            // ,
-            // catchError(this.errorHandler)
+            }),
+            catchError(this.errorHandler)
           );
     }
 
@@ -88,6 +62,36 @@ export class AnimalService{
     };
   }
 
+ 
+  //what ever is in the request body, that is the object of IProduct
+  //http post request  with the request body and request headers -content type application/json
+  //url is the collection of events ==  /api/events
+
+  //what is the method name --createProduct
+  //args -- product of type IProduct
+  //return Observable<IProduct>
+
+  createAnimal(animal: IAnimal): Observable<IAnimal> {
+    //headers variable to set request headers
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    //newProduct spread across product
+    const newAnimal = { ...animal, id: null };
+
+    //return logic starts here
+    //http .post method
+    //generics method -- IProduct
+    //args --3 url , newProduct ,headers
+    //this.url -- declared in the class outside the functions
+    return this.http.post<IAnimal>(this.url, newAnimal, { headers }).pipe(
+      tap((data) => {
+        console.log('in create new product' + JSON.stringify(data));
+        //pushing the new data new Product to the products array
+        this.animals.push(data);
+      }, catchError(this.errorHandler))
+    );
+  }
+
     // getAnimalById(id:number): any{
     //     animal:IAnimal[] = this.getAnimals();
     // }
@@ -107,5 +111,21 @@ export class AnimalService{
     
     
     //    }
+
+      //errorhandler which returns the Observable with errorMessage
+  
+  errorHandler = (err: any) => {
+    let errorMessage: string;
+    //a client side error or network error then ErrorEvent object will be thrown
+
+    if (err.error instanceof ErrorEvent) {
+      errorMessage = `An error has occured ${err.error.message}`;
+    } else {
+      errorMessage = `Backend error code ${err.status} ${err.body.error}`;
+    }
+    console.log(err);
+    return throwError(errorMessage);
+
+  };
     
 }
