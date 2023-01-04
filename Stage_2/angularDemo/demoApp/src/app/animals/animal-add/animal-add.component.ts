@@ -112,18 +112,21 @@ export class AnimalAddComponent implements OnInit{
             (err) => (this.errorMessage = err)
           );
         } 
-        
-        // else {
-        //   //updating existing animal
-        //   this.animalService.updateAnimal(product).subscribe(
-        //     (resp) => this.animalService.changeSelectedAnimal(resp),
-        //     (err) => (this.errorMessage = err)
-        //   );
-        // }
+        else {
+          //updating existing animal
+          this.animalService.updateAnimal(animal).subscribe(
+            (resp) => this.animalService.changeSelectedAnimal(resp),
+            (err) => (this.errorMessage = err)
+          );
+        }
       }
 
       this.router.navigate(['animals']);
     }
+  }
+
+  updateAnimal(selectedAnimal:IAnimal){
+
   }
 
 }

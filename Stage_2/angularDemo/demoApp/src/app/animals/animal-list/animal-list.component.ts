@@ -77,4 +77,9 @@ export class AnimalListComponent implements OnInit{
       this.animalService.changeSelectedAnimal(this.animalService.newAnimal());
       this.router.navigateByUrl('animals/addAnimal');
   }
+
+  updateAnimal(selAnimal:IAnimal){
+    this.animalService.changeSelectedAnimal(selAnimal);
+    this.router.navigateByUrl('animals/addAnimal');
+  }
 }

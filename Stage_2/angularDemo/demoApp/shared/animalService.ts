@@ -1,7 +1,7 @@
 
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, catchError, Observable, tap, throwError } from "rxjs";
+import { BehaviorSubject, catchError, map, Observable, tap, throwError } from "rxjs";
 import { IAnimal } from "src/app/animals/animal-list/animal";
 import { IEvent } from "src/app/events/events";
 
@@ -92,6 +92,28 @@ export class AnimalService{
     );
   }
 
+  updateAnimal(animal: IAnimal): Observable<IAnimal> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    //put http method
+    const url = `${this.url}/${animal.id}`;
+
+    //logic to call http put method to update the product on the given url
+    return this.http.put<IAnimal>(url, animal, { headers }).pipe(
+      tap(() => {
+        console.log('update product' + animal.id);
+        const foundIndex = this.animals.findIndex(
+          (item) => item.id === animal.id
+        );
+        if (foundIndex > -1) {
+          this.animals[foundIndex] = animal;
+        }
+      }),
+      map(() => animal),
+      catchError(this.errorHandler)
+    );
+  }
+
     // getAnimalById(id:number): any{
     //     animal:IAnimal[] = this.getAnimals();
     // }
@@ -127,5 +149,7 @@ export class AnimalService{
     return throwError(errorMessage);
 
   };
+
+
     
 }
