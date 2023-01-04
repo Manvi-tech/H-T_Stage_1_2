@@ -1,27 +1,41 @@
 <body>
     <h1>Animal-list</h1>
 
-    <table border="">
+    <div class="table-responsive">
         
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Description</th>
-            <th>Image</th>
-            <!-- <th>
-                <button class="btn btn-primary" (click)="imgVisibility()">{{showIamge ? 'Hide Image' : 'Show Image'}}</button>
-            </th> -->
-        </tr>
+        <table class="table" border="">
+        
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Description</th>
+                <th>Image</th>
+                <!-- <th>
+                    <button class="btn btn-primary" (click)="imgVisibility()">{{showIamge ? 'Hide Image' : 'Show Image'}}</button>
+                </th> -->
+            </tr>
+    
+            <tr *ngFor="let animal of animals;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{animal.name}}</td>
+                <td>{{animal.age}}</td>
+                <td>{{animal.description}}</td>
+                <td><a [routerLink]="['/animals',animal.id]">{{animal.id}} 's image</a></td>
+                <!-- <td><img *ngIf="showIamge" src="{{animal.imageUrl}}" alt=""></td> -->
+            </tr>
 
-        <tr *ngFor="let animal of animals;let i = index">
-            <td>{{i+1}}</td>
-            <td>{{animal.name}}</td>
-            <td>{{animal.age}}</td>
-            <td>{{animal.description}}</td>
-            <td><a [routerLink]="['/animals',animal.id]">{{animal.id}} 's image</a></td>
-            <!-- <td><img *ngIf="showIamge" src="{{animal.imageUrl}}" alt=""></td> -->
-        </tr>
+        </table>
 
-    </table>
+        <div id="add-btn">
+            <button (click)="addAnimal()" 
+                class="btn btn-info">
+                add animal
+            </button>
+        </div>
+
+    </div>
+
 </body>
+
+<router-outlet></router-outlet>

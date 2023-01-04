@@ -32,6 +32,7 @@ import { ProductComponent } from './products/display/product.component';
 import { GreetingComponent } from './greeting/greeting.component';
 import { ParentComponent } from './contentViewChild/parent.component';
 import { ChldComponent } from './contentViewChild/chld.component';
+import { AnimalAddComponent } from './animals/animal-add/animal-add.component';
  
 
 @NgModule({
@@ -62,6 +63,7 @@ import { ChldComponent } from './contentViewChild/chld.component';
     GreetingComponent,
     ParentComponent,
     ChldComponent,
+    AnimalAddComponent,
     
   ],
   imports: [

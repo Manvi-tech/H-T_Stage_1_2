@@ -26,7 +26,7 @@
 
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { BehaviorSubject, Observable, tap } from "rxjs";
 import { IAnimal } from "src/app/animals/animal-list/animal";
 import { IEvent } from "src/app/events/events";
 
@@ -37,14 +37,56 @@ import { IEvent } from "src/app/events/events";
 
 export class AnimalService{
 
+    animals:IAnimal[]=[];
 
     constructor(private http:HttpClient){}
 
     private url ='api/animals';
     
     getAnimals(): Observable<any[]>{
-        return this.http.get<IAnimal[]>(this.url);
+        return this.http.get<IAnimal[]>(this.url).pipe(
+            tap((data) => {
+              console.log(data);
+              this.animals = data;
+            })
+            // ,
+            // catchError(this.errorHandler)
+          );
     }
+
+  //why are we using BehaviorSubject
+  //BehaviorSubject is a subtype of Observable
+  //BehaviorSubject --it will emit only the last value of the source observable
+  //BehaviorSubject will ensure that every consumer get recent most value
+  //selection --selected object from the list of values
+  private selectedAnimalSource = new BehaviorSubject<IAnimal | null>(null);
+
+  //conventionally you can put $ to the var if it is a Observable
+  selectedAnimalChanges$ = this.selectedAnimalSource.asObservable();
+
+  //called from addAnimal() 
+  changeSelectedAnimal(selectedAnimal: IAnimal | null): void {
+    this.selectedAnimalSource.next(selectedAnimal);
+    console.log(selectedAnimal);
+    console.log(this.selectedAnimalChanges$);
+    console.log(this.selectedAnimalSource);
+  }
+
+   // a method newProduct which acts like a constructor of creating a new Product
+  //what is name of the method -- newProduct
+  //how many args --zero args
+  //return type IProduct
+
+  newAnimal(): IAnimal {
+    //logic should focus on sending back a IProduct
+    return {
+      id: 0,
+      name: '',
+      age: 1,
+      description:'',
+      imageUrl: ''
+    };
+  }
 
     // getAnimalById(id:number): any{
     //     animal:IAnimal[] = this.getAnimals();

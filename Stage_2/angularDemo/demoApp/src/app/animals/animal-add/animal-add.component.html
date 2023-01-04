@@ -1,0 +1,52 @@
+
+<h1 class="text-center">Animal Add Component</h1>
+
+<div *ngIf="animal" class="col-md-6 user-container" style="margin: auto;">
+
+    <div class="card-header">
+        <h2 class="text-center">{{pageTitle}}</h2>
+    </div>
+      
+      <form [formGroup]="addAnimal" (ngSubmit)="saveAnimal(animal)">
+        
+        <!-- name -->
+        <div class="form-group  my-3">
+          <label for="name">Animal Name:</label>
+          <input type="text" formControlName="name" placeholder="Animal name" name="name" class="form-control" id="name" (blur)="blur()">
+        </div>
+  
+        <!-- age -->
+        <div class="form-group  my-3">
+          <label for="age">Age:</label>
+          <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age" (blur)="blur()">
+        </div>
+  
+        <!-- descrption -->
+        <div class="form-group  my-3">
+          <label for="description"> Description:</label>
+          <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description" (blur)="blur()">
+        </div>
+  
+        <!-- image -->
+        <div class="form-group  my-3">
+          <label for="imageUrl">Image:</label>
+          <input type="text" formControlName="imageUrl" placeholder="Product Image" name="imageUrl" class="form-control" id="imageUrl" (blur)="blur()">
+        </div>
+  
+        <!-- <button class="btn btn-danger" type="button"
+        (click)="deleteAnmal(animal)">Delete Product</button> -->
+        
+        <button [disabled]='!addAnimal.valid || !addAnimal.dirty' class="btn btn-success">
+            Save Product
+        </button>
+        
+      </form>
+  
+      <!-- <div class='alert alert-danger' *ngIf="errorMessage">
+        Error : {{errorMessage}}
+      </div> -->
+  
+  </div>
+  
+  
+  
