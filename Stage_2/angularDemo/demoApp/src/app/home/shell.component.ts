@@ -5,40 +5,43 @@ import { AfterContentChecked, AfterContentInit, Component, OnChanges, OnDestroy,
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.css']
 })
-export class ShellComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit, AfterContentChecked{
+export class ShellComponent 
+// implements OnInit, OnDestroy, OnChanges, AfterContentInit, AfterContentChecked
+{
   
   msg:string='hello there'
   
   constructor() { console.log('shell constructor');}
-  ngOnDestroy(): void {
-    console.log('greeting destroyed');}
+  
+  // ngOnDestroy(): void {
+  //   console.log('greeting destroyed');}
 
-    ngOnInit(): void {
-      console.log('greeting in oninit');
-    }
-    ngOnChanges():void{
-     console.log('greeting component changes');
-    }
+  //   ngOnInit(): void {
+  //     console.log('greeting in oninit');
+  //   }
+  //   ngOnChanges():void{
+  //    console.log('greeting component changes');
+  //   }
 
-    ngDoCheck(){
-      console.log('doCheck of greeting');
-    }
+  //   ngDoCheck(){
+  //     console.log('doCheck of greeting');
+  //   }
 
-    ngAfterContentInit(){
+  //   ngAfterContentInit(){
 
-      console.log('greeting content init');
+  //     console.log('greeting content init');
 
-    }
-    ngAfterContentChecked(){
-      console.log('greeting content checked');
-    }
-    ngAfterViewInit(){
-      console.log('greeting view init');
+  //   }
+  //   ngAfterContentChecked(){
+  //     console.log('greeting content checked');
+  //   }
+  //   ngAfterViewInit(){
+  //     console.log('greeting view init');
 
-    }
+  //   }
 
-   ngAfterViewChecked(){
-    console.log('greeting view checked');
+  //  ngAfterViewChecked(){
+  //   console.log('greeting view checked');
 
-   }
+  //  }
 }

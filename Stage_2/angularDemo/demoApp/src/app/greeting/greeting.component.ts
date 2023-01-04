@@ -5,47 +5,51 @@ import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']
 })
-export class GreetingComponent implements OnInit, OnDestroy, OnChanges{
+export class GreetingComponent 
+// implements OnInit, OnDestroy, OnChanges
+{
 
   @Input() messageText:string='Welcome to angular content projection';
   // messageText:string='Welcome to angular content projection'
   constructor() { }
 
-  ngOnDestroy(): void {
-    console.log('greeting destroyed');}
+  displayMessage():string{
+    return this.messageText;
+  }
 
-    ngOnInit(): void {
-      console.log('greeting in oninit');
-    }
-    ngOnChanges():void{
-     console.log('greeting component changes');
-    }
+  // ngOnDestroy(): void {
+  //   console.log('greeting destroyed');}
 
-    ngDoCheck(){
-      console.log('doCheck of greeting');
-    }
+  //   ngOnInit(): void {
+  //     console.log('greeting in oninit');
+  //   }
+  //   ngOnChanges():void{
+  //    console.log('greeting component changes');
+  //   }
 
-    ngAfterContentInit(){
+  //   ngDoCheck(){
+  //     console.log('doCheck of greeting');
+  //   }
 
-      console.log('greeting content init');
+  //   ngAfterContentInit(){
 
-    }
-    ngAfterContentChecked(){
-      console.log('greeting content checked');
-    }
-    ngAfterViewInit(){
-      console.log('greeting view init');
+  //     console.log('greeting content init');
 
-    }
+  //   }
+  //   ngAfterContentChecked(){
+  //     console.log('greeting content checked');
+  //   }
+  //   ngAfterViewInit(){
+  //     console.log('greeting view init');
 
-   ngAfterViewChecked(){
-    console.log('greeting view checked');
+  //   }
 
-   }
+  //  ngAfterViewChecked(){
+  //   console.log('greeting view checked');
 
-    displayMessage():string{
-      return this.messageText;
-    }
+  //  }
+
+   
 
 
 }

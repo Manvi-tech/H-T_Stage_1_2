@@ -8,7 +8,8 @@ import { AuthService } from '../user/auth.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit, AfterContentChecked
+export class MenuComponent 
+// implements OnInit, OnDestroy, OnChanges, AfterContentInit, AfterContentChecked
 {
   
   pageTitle: string = 'Online Shopping';
@@ -51,35 +52,36 @@ export class MenuComponent implements OnInit, OnDestroy, OnChanges, AfterContent
   }
 
   ngOnDestroy(): void {
-    console.log('greeting destroyed');}
+    console.log('greeting destroyed');
+  }
 
-    ngOnInit(): void {
-      console.log('greeting in oninit');
-    }
-    ngOnChanges():void{
-     console.log('greeting component changes');
-    }
+  //   ngOnInit(): void {
+  //     console.log('greeting in oninit');
+  //   }
+  //   ngOnChanges():void{
+  //    console.log('greeting component changes');
+  //   }
 
-    ngDoCheck(){
-      console.log('doCheck of greeting');
-    }
+  //   ngDoCheck(){
+  //     console.log('doCheck of greeting');
+  //   }
 
-    ngAfterContentInit(){
+  //   ngAfterContentInit(){
 
-      console.log('greeting content init');
+  //     console.log('greeting content init');
 
-    }
-    ngAfterContentChecked(){
-      console.log('greeting content checked');
-    }
-    ngAfterViewInit(){
-      console.log('greeting view init');
+  //   }
+  //   ngAfterContentChecked(){
+  //     console.log('greeting content checked');
+  //   }
+  //   ngAfterViewInit(){
+  //     console.log('greeting view init');
 
-    }
+  //   }
 
-   ngAfterViewChecked(){
-    console.log('greeting view checked');
+  //  ngAfterViewChecked(){
+  //   console.log('greeting view checked');
 
-   }
+  //  }
   
 }

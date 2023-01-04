@@ -7,14 +7,5 @@ import { Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
 })
 export class ParentComponent {
 
-  @ContentChild("header") cardContentHeader!: ElementRef;
-  @ViewChild("header") cardViewHeader!: ElementRef;
-
-  @ContentChild("main") mainContentData!: ElementRef;
-  @ViewChild("main") mainViewData!: ElementRef;
-
-  @ContentChild("footer") footerContentData!: ElementRef;
-  @ViewChild("footer") footerViewData!: ElementRef;
-
 
 }
