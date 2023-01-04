@@ -30,6 +30,8 @@ import { LoginComponent } from './user/login.component';
 import { ShellComponent } from './home/shell.component';
 import { ProductComponent } from './products/display/product.component';
 import { GreetingComponent } from './greeting/greeting.component';
+import { ParentComponent } from './contentViewChild/parent.component';
+import { ChldComponent } from './contentViewChild/chld.component';
  
 
 @NgModule({
@@ -58,6 +60,8 @@ import { GreetingComponent } from './greeting/greeting.component';
     ShellComponent,
     ProductComponent,
     GreetingComponent,
+    ParentComponent,
+    ChldComponent,
     
   ],
   imports: [
