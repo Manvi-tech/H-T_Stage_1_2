@@ -82,4 +82,17 @@ export class AnimalListComponent implements OnInit{
     this.animalService.changeSelectedAnimal(selAnimal);
     this.router.navigateByUrl('animals/addAnimal');
   }
+
+  deleteAnimal(animal:IAnimal){
+    if (confirm(`Are you sure you want to delete ${animal.name}`)) {
+      this.animalService.deleteAnimal(animal.id).subscribe(
+        (resp) => this.animalService.changeSelectedAnimal(null),
+        (err) => (this.errorMessage = err)
+      );
+    } else {
+      //no need to delete the product
+      this.animalService.changeSelectedAnimal(null);
+    }
+    // this.router.navigateByUrl('animals/addAnimal');
+  }
 }

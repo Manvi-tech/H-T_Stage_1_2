@@ -114,6 +114,22 @@ export class AnimalService{
     );
   }
 
+  deleteAnimal(animalId:number): Observable<{}>{
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    //@DeleteMapping deleteAll delete url/id  /api/products/111
+    const url = `${this.url}/${animalId}`;
+
+    return this.http.delete<IAnimal>(url, { headers }).pipe(
+      tap((data) => {
+        console.log('deleted prd' + animalId);
+        const foundIndex = this.animals.findIndex((item) => item.id === animalId);
+        //if product id is not found means index returned will be -1
+        if (foundIndex > -1) this.animals.splice(foundIndex, 1);
+      }, catchError(this.errorHandler))
+    );
+  }
+
     // getAnimalById(id:number): any{
     //     animal:IAnimal[] = this.getAnimals();
     // }

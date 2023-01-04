@@ -12,6 +12,7 @@
                 <th>Description</th>
                 <th>Image</th>
                 <th></th>
+                <th></th>
                 <!-- <th>
                     <button class="btn btn-primary" (click)="imgVisibility()">{{showIamge ? 'Hide Image' : 'Show Image'}}</button>
                 </th> -->
@@ -26,6 +27,10 @@
                 <!-- <td><img *ngIf="showIamge" src="{{animal.imageUrl}}" alt=""></td> -->
                 <td>
                     <button (click)="updateAnimal(animal)">update</button>
+                </td>
+
+                <td>
+                    <button (click)="deleteAnimal(animal)">delete</button>
                 </td>
             </tr>
 
