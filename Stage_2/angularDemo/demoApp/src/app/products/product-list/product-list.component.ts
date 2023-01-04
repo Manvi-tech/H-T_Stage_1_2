@@ -25,14 +25,15 @@ export class ProductListComponent implements OnInit, OnDestroy{
 
   @Output() emitProductToCart:EventEmitter<IProduct>= new EventEmitter<IProduct>();
 
-  constructor(private productService:ProductService, private logService:LoggingService,private router:Router){}
+  // private logService:LoggingService
+  constructor(private productService:ProductService,private router:Router){}
   
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   };
 
   displayProd(){
-      this.logService.logProducts(this.products);
+      // this.logService.logProducts(this.products);
   }
 
   ngOnInit(): void {
