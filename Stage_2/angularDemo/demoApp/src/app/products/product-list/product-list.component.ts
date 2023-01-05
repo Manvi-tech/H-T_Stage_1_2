@@ -23,6 +23,8 @@ export class ProductListComponent implements OnInit, OnDestroy{
   href:string='';
   dataReceived=this.productService.getProducts();
 
+  obsProducts$ !: Observable<IProduct[]>;
+
   @Output() emitProductToCart:EventEmitter<IProduct>= new EventEmitter<IProduct>();
 
   // private logService:LoggingService
@@ -39,24 +41,27 @@ export class ProductListComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     this.href=this.router.url;
     console.log(this.href);
+
+    this.obsProducts$ = this.productService.getProducts();
+
     //sub object is initialized
-       this.sub =this.productService.getProducts().subscribe(
-         (response)=>{
+      // this.sub =this.productService.getProducts().subscribe(
+      //    (response)=>{
 
-         console.log(response);
-         this.products=response;
-         this.filteredProducts = this.products;
+      //    console.log(response);
+      //    this.products=response;
+      //    this.filteredProducts = this.products;
 
-       },
-       err=>{this.errorMessage=err;
-        console.log(err);
-       }
-       );
+      //  },
+      //  err=>{this.errorMessage=err;
+      //   console.log(err);
+      //  }
+      //  );
 
-       this.productService.selectedProductChanges$.
-       subscribe(currentProduct=>{this.selectedProduct=currentProduct;
-       console.log(this.selectedProduct);
-       });
+      //  this.productService.selectedProductChanges$.
+      //  subscribe(currentProduct=>{this.selectedProduct=currentProduct;
+      //  console.log(this.selectedProduct);
+      // });
 
   }
 
