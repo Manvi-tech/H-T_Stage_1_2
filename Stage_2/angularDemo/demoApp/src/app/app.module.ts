@@ -33,6 +33,7 @@ import { GreetingComponent } from './greeting/greeting.component';
 import { ParentComponent } from './contentViewChild/parent.component';
 import { ChldComponent } from './contentViewChild/chld.component';
 import { AnimalAddComponent } from './animals/animal-add/animal-add.component';
+// import { TodoModule } from './todo/todo.module';
  
 
 @NgModule({
@@ -67,6 +68,7 @@ import { AnimalAddComponent } from './animals/animal-add/animal-add.component';
     
   ],
   imports: [
+    // TodoModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

@@ -19,30 +19,41 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 
 const routes: Routes = [
-  // {path:'events/:id',component:EventDetailComponent},
-  // {path:'addProduct',component:ProductAddComponent},
+  
   {path:'welcome',pathMatch:'full' ,component:WelcomeComponent},
+
   {path:'events',component:EventDetailComponent},
+
   {path:'books',component:BookComponent},
+
   {path:'trustees', component:TrusteeComponent},
+
   {path:'animals', component:AnimalListComponent,
     children:[{path:'addAnimal', component:AnimalAddComponent}]
   },
+
   {path:'animals/:id',component:AnimalImgComponent},
-  // {path:'' ,component:HomeComponentComponent,
-  //   children:[{path:'addProduct', component:ProductAddComponent}],
-  // },
-  {path:'',component:ShellComponent,
+
+  // localhost:4200
+  {path:'',pathMatch:'full', component:ShellComponent,
     children:[{path:'welcome',component:WelcomeComponent}]
   },
+
   {path:'',redirectTo:'welcome',pathMatch:'full'},
+
   {path:'login',component:LoginComponent},
+
   {
     path:'products',
     component:ProductComponent,
     // canActivate: [AuthGuard],
     children:[{path:'addProduct',component:ProductAddComponent}]
   },
+
+  {
+    path:'todo',
+    loadChildren:()=>import('./todo/todo.module').then((m)=>m.TodoModule)
+  }
 ]
 
  
