@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 import { LoggingService } from 'shared/logging.service';
 
 @Component({
@@ -6,10 +7,25 @@ import { LoggingService } from 'shared/logging.service';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
-export class WelcomeComponent {
+export class WelcomeComponent implements OnInit{
 
 
-  constructor(private logService:LoggingService){};
+  constructor(private logService:LoggingService){}
+  
+  ngOnInit(): void {
+    console.log('subscribed values :-')
+    // const obs = new Observable((data)=> data.next(Math.random()));
+    // obs.subscribe((d)=>console.log(d));
+    // obs.subscribe((d)=>console.log(d));
+
+    const subject = new Subject();
+
+    subject.subscribe(d => console.log(d));
+    subject.subscribe(d => console.log(d));
+
+    subject.next(Math.random());
+  }
+
   pageTitle:string="title";
   data:number=3;
   msg:string='manvi';
@@ -19,5 +35,6 @@ export class WelcomeComponent {
   callLog():void{
     this.logMsg = this.logService.log();
   }
+  
   
 }

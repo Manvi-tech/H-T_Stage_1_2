@@ -110,7 +110,6 @@ export class ProductListComponent implements OnInit, OnDestroy{
   //  ];
 
 
-
   filterProd():void{
      this.filteredProducts = this.products.filter((p:IProduct)=>p.category === (this.category));
   }
