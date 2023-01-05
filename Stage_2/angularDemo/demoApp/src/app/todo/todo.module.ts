@@ -4,6 +4,11 @@ import { TodoPageComponent } from './todo-page.component';
 import { FormsModule } from '@angular/forms';
 import { TodoRoutingPageModule } from './todo-routing.module';
 import { AppModule } from '../app.module';
+import { StoreModule } from '@ngrx/store';
+// import { StoreModule } from '@ngrx/store/public_api';
+import { EffectsModule } from '@ngrx/effects';
+import { todoReducer } from '../state/todos/todo.reducer';
+import { TodoEffects } from '../state/todos/todo.effects';
 
 
 
@@ -12,7 +17,11 @@ import { AppModule } from '../app.module';
     TodoPageComponent
   ],
   imports: [
-    CommonModule, FormsModule, TodoRoutingPageModule
+    CommonModule ,
+    FormsModule,
+    TodoRoutingPageModule,
+    StoreModule.forFeature('todo',todoReducer),
+    EffectsModule.forFeature(TodoEffects)
   ]
 })
 export class TodoModule { }

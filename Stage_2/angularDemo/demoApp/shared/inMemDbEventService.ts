@@ -6,6 +6,7 @@ import { Observable } from "rxjs";
 import { IAnimal } from "src/app/animals/animal-list/animal";
 import { IEvent } from "src/app/events/events";
 import { Categories, IProduct } from "src/app/products/product-list/product";
+import { Todo } from "src/app/todo/todo.model";
 
 @Injectable({
     providedIn:'root'
@@ -15,6 +16,26 @@ export class InMemoryDbEventService implements InMemoryDbService {
     
     createDb(reqInfo?: RequestInfo | undefined): {} | Observable<{}> | Promise<{}> { 
         
+        const todos: Todo[]=[
+            {id:'111',content:'hello'},
+            {id:'222',content:'angular web db'}
+        ];
+        
+        // const customers:Customer[]=[ {
+        //   "name": "Amit Sharma ",
+        //   "phone": "910928392098",
+        //   "address": "123 MG Street",
+        //   "membership": "Platinum",
+        //   "id": 1
+        // },
+        // {
+        //   "name": "Hetal Shah",
+        //   "phone": "808937482734",
+        //   "address": "893 Main Street",
+        //   "membership": "Pro",
+        //   "id": 2
+        // }];
+
         let events:IEvent[] = [
             {
                 "id":1,
@@ -177,7 +198,7 @@ export class InMemoryDbEventService implements InMemoryDbService {
         
         ]
 
-        return {events, products, animals};
+        return {events, products, animals, todos};
                 
     }
 

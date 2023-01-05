@@ -33,6 +33,14 @@ import { GreetingComponent } from './greeting/greeting.component';
 import { ParentComponent } from './contentViewChild/parent.component';
 import { ChldComponent } from './contentViewChild/chld.component';
 import { AnimalAddComponent } from './animals/animal-add/animal-add.component';
+import { TodoEffects } from './state/todos/todo.effects';
+// import { EffectsModule } from '@ngrx/effects/src';
+// import { StoreModule } from '@ngrx/store/src';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { todoReducer } from './state/todos/todo.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppEffects } from './app.effects';
 // import { TodoModule } from './todo/todo.module';
  
 
@@ -74,6 +82,10 @@ import { AnimalAddComponent } from './animals/animal-add/animal-add.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    StoreModule.forRoot({}),
+    //have to create AppEffects
+    EffectsModule.forRoot([AppEffects]),
+    StoreDevtoolsModule.instrument(),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDbEventService)
   ],
   providers: [],

@@ -36,7 +36,9 @@ const routes: Routes = [
 
   // localhost:4200
   {path:'',pathMatch:'full', component:ShellComponent,
-    children:[{path:'welcome',component:WelcomeComponent}]
+    children:[
+      {path:'welcome',component:WelcomeComponent}
+    ]
   },
 
   {path:'',redirectTo:'welcome',pathMatch:'full'},

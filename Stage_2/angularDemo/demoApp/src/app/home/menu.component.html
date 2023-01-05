@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand">{{ pageTitle }}</a>
+    <a class="navbar-brand" style="margin-top: 30px;">{{ pageTitle }}</a>
+    
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item" routerLinkActive="active">
@@ -34,9 +35,13 @@
   </div>
 </nav>
 
-<!-- menu has child component: greeting component -->
-<app-greeting></app-greeting>
+<div class="text-center" style="border: 1px solid black; ">
+  <h1>MenuComponentInshell</h1>
+  <!-- menu has child component: greeting component -->
+  <app-greeting></app-greeting>
+  <button (click)="greet()" class="mx-3 my-3 text-center">click me</button>
+</div>
 
 <ng-template #ref1>hello from ref1</ng-template>
 
-<button (click)="greet()" class="mx-3 my-3 text-center">click me</button>
+

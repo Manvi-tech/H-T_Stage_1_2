@@ -12,7 +12,7 @@ export class MenuComponent
 // implements OnInit, OnDestroy, OnChanges, AfterContentInit, AfterContentChecked
 {
   
-  pageTitle: string = 'Online Shopping';
+  pageTitle: string = 'MenuComponentInShell';
 
   get isLoggedIn(): boolean {
     //service to return the loggedInstatus ofthe user
