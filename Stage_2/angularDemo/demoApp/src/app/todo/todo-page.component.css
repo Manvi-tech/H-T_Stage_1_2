@@ -1,0 +1,14 @@
+
+
+#todos, form{
+    margin: auto;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+li{
+    display: flex;
+    width: 500px; 
+    justify-content: space-between; 
+    margin-bottom: 10px;
+}

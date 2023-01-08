@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { Categories, IProduct } from '../products/product-list/product';
+import { IProduct } from '../product-list/product';
+
+
 
 @Component({
   selector: 'app-cart-list',
@@ -10,12 +12,11 @@ import { Categories, IProduct } from '../products/product-list/product';
 export class CartListComponent implements OnChanges{
  
   title:string='';
+  @Input() cartList:IProduct[]=[];
 
   ngOnChanges(changes: SimpleChanges): void {
      
   }
-
-  @Input() cartList:IProduct[]=[];
 
   ratingClick(msg:string):void{
     // console.log('inside product click')

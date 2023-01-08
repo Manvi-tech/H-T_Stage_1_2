@@ -5,7 +5,7 @@ import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { Observable } from "rxjs";
 import { IAnimal } from "src/app/animals/animal-list/animal";
 import { IEvent } from "src/app/events/events";
-import { Categories, IProduct } from "src/app/products/product-list/product";
+import { Categories, IProduct } from "src/app/product/product-list/product";
 import { Todo } from "src/app/todo/todo.model";
 
 @Injectable({

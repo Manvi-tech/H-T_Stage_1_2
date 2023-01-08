@@ -6,29 +6,32 @@ import { Store } from '@ngrx/store';
 import { Todo } from './todo.model';
 import { Observable } from 'rxjs';
 import { state } from '@angular/animations';
-import { selectAllTodos } from '../state/todos/todo.selectors';
-import { loadTodos } from '../state/todos/todo.actions';
+import { addTodo, loadTodos, removeTodo } from '../state/todos/todo.actions';
+import { getTodos } from '../state/todos/todo.selectors';
 
 @Component({
   selector: 'app-todo-page',
   templateUrl: './todo-page.component.html',
-  styleUrls: ['./todo-page.component.css']
+  styleUrls: ['./todo-page.component.css'],
 })
 export class TodoPageComponent implements OnInit {
-  
-  public allTodos$:Observable<Todo[]> = this.store.select(selectAllTodos);
-  public todo='';
-  constructor(private store:Store){}
- 
+  public allTodos$: Observable<Todo[]> = this.store.select(getTodos);
+  public todo = '';
+  constructor(private store: Store) {}
+
   ngOnInit(): void {
-    console.log('in init')
+    console.log('in init');
     this.store.dispatch(loadTodos());
   }
+  onSubmit(todoForm: NgForm) {
+    const todo = todoForm.form.value.todo;
 
-removeTodo(todo:Todo){}
+    console.log('in submit', todo);
+    this.store.dispatch(addTodo({ content: todo }));
+    this.todo = '';
+  }
 
-onSubmit(todoForm:NgForm){
-  console.log(todoForm.value);
-}
-
+  removeTodo(todo: Todo) {
+    this.store.dispatch(removeTodo({ id: todo.id }));
+  }
 }

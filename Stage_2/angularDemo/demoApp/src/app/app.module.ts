@@ -8,9 +8,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FlatListComponent } from './flats/flat-list.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductListComponent } from './products/product-list/product-list.component';
 import { StarComponent } from './star/star.component';
-import { CartListComponent } from './cart/cart-list.component';
+// import { CartListComponent } from './cart/cart-list.component';
 import { RepeatDataPipe } from './repeat-data.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,7 +17,6 @@ import { EventListComponent } from './events-list/event-list.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { InMemoryDbEventService } from '../../shared/inMemDbEventService';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { ProductAddComponent } from './products/product-add.component';
 import { HomeComponentComponent } from './home/home-component.component';
 import { EmojiDirective } from './emoji.directive';
 import { TrusteeComponent } from './trustees/trustee.component';
@@ -28,7 +26,6 @@ import { AnimalImgComponent } from './animals/animal-img.component';
 import { MenuComponent } from './home/menu.component';
 import { LoginComponent } from './user/login.component';
 import { ShellComponent } from './home/shell.component';
-import { ProductComponent } from './products/display/product.component';
 import { GreetingComponent } from './greeting/greeting.component';
 import { ParentComponent } from './contentViewChild/parent.component';
 import { ChldComponent } from './contentViewChild/chld.component';
@@ -51,14 +48,12 @@ import { AppEffects } from './app.effects';
     WelcomeComponent,
     FlatListComponent,
     AnimalListComponent,
-    ProductListComponent,
-    StarComponent,
-    CartListComponent,
+    // StarComponent,
+    // CartListComponent,
     RepeatDataPipe,
     NavbarComponent,
     EventListComponent,
     EventDetailComponent,
-    ProductAddComponent,
     HomeComponentComponent,
     EmojiDirective,
     TrusteeComponent,
@@ -68,7 +63,6 @@ import { AppEffects } from './app.effects';
     MenuComponent,
     LoginComponent,
     ShellComponent,
-    ProductComponent,
     GreetingComponent,
     ParentComponent,
     ChldComponent,

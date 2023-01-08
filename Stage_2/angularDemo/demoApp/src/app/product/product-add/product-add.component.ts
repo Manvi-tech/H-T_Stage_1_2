@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { GenericValidator } from 'shared/genericValidator';
 import { ProductService } from 'shared/product.service';
-import { IProduct } from './product-list/product';
+import { IProduct } from '../product-list/product';
 
 @Component({
   selector: 'app-product-add',

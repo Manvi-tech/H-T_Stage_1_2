@@ -8,7 +8,8 @@ import {
   tap,
   throwError,
 } from 'rxjs';
-import { Categories, IProduct } from 'src/app/products/product-list/product';
+import { IProduct, Categories } from 'src/app/product/product-list/product';
+
 
 @Injectable({
   providedIn: 'root',

@@ -3,7 +3,8 @@ import { HttpClientTestingModule, HttpTestingController } from "@angular/common/
 import { getTestBed, inject, TestBed } from "@angular/core/testing";
 
 import { of } from "rxjs";
-import { Categories, IProduct } from "src/app/products/product-list/product";
+import { Categories, IProduct } from "src/app/product/product-list/product";
+
 
 import { ProductService } from "./product.service"
 /*class FakeApiService {

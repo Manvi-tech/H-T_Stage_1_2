@@ -9,9 +9,6 @@ import { BookComponent } from './books/book.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { HomeComponentComponent } from './home/home-component.component';
 import { ShellComponent } from './home/shell.component';
-import { ProductComponent } from './products/display/product.component';
-import { ProductAddComponent } from './products/product-add.component';
-import { ProductListComponent } from './products/product-list/product-list.component';
 import { TrusteeComponent } from './trustees/trustee.component';
 import { AuthGuard } from './user/auth-gaurd.service';
 import { LoginComponent } from './user/login.component';
@@ -47,9 +44,10 @@ const routes: Routes = [
 
   {
     path:'products',
-    component:ProductComponent,
+    loadChildren:()=>import('./product/product.module').then((m)=>m.ProductModule)
+    // component:ProductComponent,
     // canActivate: [AuthGuard],
-    children:[{path:'addProduct',component:ProductAddComponent}]
+    // children:[{path:'addProduct',component:ProductAddComponent}]
   },
 
   {

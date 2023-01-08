@@ -20,7 +20,7 @@ import { TodoEffects } from '../state/todos/todo.effects';
     CommonModule ,
     FormsModule,
     TodoRoutingPageModule,
-    StoreModule.forFeature('todo',todoReducer),
+    StoreModule.forFeature('todos',todoReducer),
     EffectsModule.forFeature(TodoEffects)
   ]
 })
