@@ -53,6 +53,7 @@ const routes: Routes = [
   },
 
   {
+    // lazy loading
     path:'todo',
     loadChildren:()=>import('./todo/todo.module').then((m)=>m.TodoModule)
   }
