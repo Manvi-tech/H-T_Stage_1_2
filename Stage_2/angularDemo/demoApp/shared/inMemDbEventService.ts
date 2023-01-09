@@ -57,15 +57,16 @@ export class InMemoryDbEventService implements InMemoryDbService {
                         "duration":"",
                         "level":10,
                         "voters":["leo", "snoppy", "tufffy"]
-                    },
-                    {
-                        "id":11,
-                        "name":"",
-                        "presentor":"Ivnam",
-                        "duration":"",
-                        "level":11,
-                        "voters":["leo", "snoppy", "tufffy"]
                     }
+                    // ,
+                    // {
+                    //     "id":11,
+                    //     "name":"",
+                    //     "presentor":"Ivnam",
+                    //     "duration":"",
+                    //     "level":11,
+                    //     "voters":["leo", "snoppy", "tufffy"]
+                    // }
                 ]
             },
         
@@ -90,14 +91,14 @@ export class InMemoryDbEventService implements InMemoryDbService {
                         "level":10,
                         "voters":["leo", "snoppy", "tufffy"]
                     },
-                    {
-                        "id":1,
-                        "name":"",
-                        "presentor":"Ivnam",
-                        "duration":"",
-                        "level":11,
-                        "voters":["leo", "snoppy", "tufffy"]
-                    }
+                    // {
+                    //     "id":1,
+                    //     "name":"",
+                    //     "presentor":"Ivnam",
+                    //     "duration":"",
+                    //     "level":11,
+                    //     "voters":["leo", "snoppy", "tufffy"]
+                    // }
                 ]
             },
         
@@ -122,14 +123,14 @@ export class InMemoryDbEventService implements InMemoryDbService {
                         "level":10,
                         "voters":["leo", "snoppy", "tufffy"]
                     },
-                    {
-                        "id":11,
-                        "name":"",
-                        "presentor":"Ivnam",
-                        "duration":"",
-                        "level":11,
-                        "voters":["leo", "snoppy", "tufffy"]
-                    }
+                    // {
+                    //     "id":11,
+                    //     "name":"",
+                    //     "presentor":"Ivnam",
+                    //     "duration":"",
+                    //     "level":11,
+                    //     "voters":["leo", "snoppy", "tufffy"]
+                    // }
                 ]
             }
         ]
