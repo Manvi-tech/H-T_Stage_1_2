@@ -40,9 +40,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppEffects } from './app.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { EventAddComponent } from './events/event-add.component';
 // import { TodoModule } from './todo/todo.module';
- 
+
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     RepeatDataPipe,
     NavbarComponent,
     EventListComponent,
+    EventAddComponent,
     EventDetailComponent,
     HomeComponentComponent,
     EmojiDirective,
@@ -82,6 +85,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     ReactiveFormsModule,
     MatNativeDateModule,
     MaterialExampleModule,
+    MatDatepickerModule,
     StoreModule.forRoot({}),
     //have to create AppEffects
     EffectsModule.forRoot([AppEffects]),

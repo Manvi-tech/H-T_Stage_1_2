@@ -17,7 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatStepperModule} from '@angular/material/stepper';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+// import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -45,6 +45,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {CdkMenuModule} from '@angular/cdk/menu';
 import {DialogModule} from '@angular/cdk/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   exports: [
@@ -95,6 +96,7 @@ import {DialogModule} from '@angular/cdk/dialog';
     PortalModule,
     ScrollingModule,
     DialogModule,
+    MatDatepickerModule
   ]
 })
 export class MaterialExampleModule {}

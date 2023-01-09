@@ -14,10 +14,10 @@ export const addTodo = createAction(
   );
   
   
-  export const loadTodos =createAction('[Todo Page] Load Todos');
+  export const loadTodos = createAction('[Todo Page] Load Todos');
   
-  export const LoadTodoSuccess =createAction('[Todo API] Todo Load Success',
+  export const LoadTodoSuccess = createAction('[Todo API] Todo Load Success',
   props<{todos:Todo[]}>());
   
-  export const LoadTodoFailure =createAction('[Todo API] Todo Load Failure',
+  export const LoadTodoFailure = createAction('[Todo API] Todo Load Failure',
   props<{error:string}>());

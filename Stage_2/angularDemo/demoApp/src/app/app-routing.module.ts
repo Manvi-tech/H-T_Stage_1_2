@@ -6,6 +6,7 @@ import { AnimalImgComponent } from './animals/animal-img.component';
 import { AnimalListComponent } from './animals/animal-list/animal-list.component';
 import { AppComponent } from './app.component';
 import { BookComponent } from './books/book.component';
+import { EventAddComponent } from './events/event-add.component';
 import { EventDetailComponent } from './events/event-detail.component';
 import { HomeComponentComponent } from './home/home-component.component';
 import { ShellComponent } from './home/shell.component';
@@ -19,7 +20,11 @@ const routes: Routes = [
   
   {path:'welcome',pathMatch:'full' ,component:WelcomeComponent},
 
-  {path:'events',component:EventDetailComponent},
+  {path:'events',component:EventDetailComponent,
+    children:[
+      {path:'addEvent',component:EventAddComponent}
+    ]
+  },
 
   {path:'books',component:BookComponent},
 

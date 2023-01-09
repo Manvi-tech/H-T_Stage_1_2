@@ -9,4 +9,4 @@ export const todosDataState =
 createFeatureSelector<TodoState>('todos');
 
 //use that feature selector to get the selector 
-export const getTodos =createSelector(todosDataState,state=>state.todos);
+export const getTodos = createSelector(todosDataState,state=>state.todos);

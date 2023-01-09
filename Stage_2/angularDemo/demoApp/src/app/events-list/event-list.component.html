@@ -1,6 +1,5 @@
 
 <!-- <h1 id="input">{{message}}</h1> -->
-
 <!-- <div class="parent">
 
     <div *ngFor="let ev of eventsList;">
@@ -59,6 +58,7 @@
     </div>
 
 </div> -->
+
 <div id="event-list">
     <mat-card class="example-card" *ngFor="let ev of eventsList;">
         <mat-card-header>
@@ -127,6 +127,12 @@
     </mat-card>
 </div>
   
+<button style="margin:20px 45%;" class="btn btn-info" [routerLink]="['addEvent']">
+    Add Event</button>
+
+
+
+
   <!-- Copyright 2023 Google LLC. All Rights Reserved.
       Use of this source code is governed by an MIT-style license that
       can be found in the LICENSE file at https://angular.io/license -->
