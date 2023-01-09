@@ -31,7 +31,9 @@
                             (ratingEventClicked) = "ratingClick($event)">
                         </app-star>
                     </td>
-                    <td><img src="{{p.image}}" alt=""></td>
+                    <td (mouseover)="toggleHover()" (mouseout)="toggleHover()">
+                        <img src="{{p.image}}" alt="" [@hover]="isHovering ? 'hoverIn' : 'hoverOut' ">
+                    </td>
                     <!-- <td>
                         <button 
                         (click)="onSelect(p)"

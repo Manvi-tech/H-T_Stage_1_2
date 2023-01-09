@@ -1,3 +1,4 @@
+import { state, style, trigger } from '@angular/animations';
 import { Component , EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
@@ -8,9 +9,26 @@ import { Categories, IProduct } from './product';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
+  animations:[
+    
+    trigger('hover', [
+      state('hoverIn', style({
+        boxShadow:'10px 10px',
+        opacity: 1,
+        backgroundColor: 'pink'
+      })),
+      state('hoverOut', style({
+        opacity: 0.8,
+        backgroundColor: 'transparent'
+      })),
+    ])
+    
+  ]
 })
 export class ProductListComponent implements OnInit, OnDestroy{
+
+  isHovering : boolean =false;
 
   errorMessage:string='';
   sub!:Subscription;
@@ -33,6 +51,10 @@ export class ProductListComponent implements OnInit, OnDestroy{
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   };
+
+  toggleHover(){
+    this.isHovering = !this.isHovering;
+  }
 
   displayProd(){
       // this.logService.logProducts(this.products);

@@ -38,6 +38,7 @@ import { StoreModule } from '@ngrx/store';
 import { todoReducer } from './state/todos/todo.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppEffects } from './app.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { TodoModule } from './todo/todo.module';
  
 
@@ -73,6 +74,7 @@ import { AppEffects } from './app.effects';
     // TodoModule,
     FormsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,

@@ -9,9 +9,10 @@ import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductComponent } from './product-display/product.component';
-// import { StoreModule } from '@ngrx/store';
-// import { EffectsModule } from '@ngrx/effects';
-
+import { StoreModule } from '@ngrx/store';
+import { productReducer } from '../state/products/product.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { ProductEffects } from '../state/products/product.effects';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import { ProductComponent } from './product-display/product.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
-    // StoreModule.forFeature('products',productReducer),
-    // EffectsModule.forFeature([ProductEffects])
+    RouterModule,
+    StoreModule.forFeature('products',productReducer),
+    EffectsModule.forFeature([ProductEffects])
   ]
 })
 export class ProductModule { }
