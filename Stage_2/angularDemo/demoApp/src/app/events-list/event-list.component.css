@@ -18,7 +18,21 @@ h6{
     margin-right: 10px;
 }
 
-.card-img-top{
+/* .card-img-top{
     width: 60% !important;
     margin: auto !important;
+} */
+
+#event-list{
+   display: flex;
+   justify-content: center;
+}
+
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
 }

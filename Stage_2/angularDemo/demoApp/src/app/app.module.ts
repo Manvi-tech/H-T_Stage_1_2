@@ -39,6 +39,8 @@ import { todoReducer } from './state/todos/todo.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppEffects } from './app.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from './material.module';
+import { MatNativeDateModule } from '@angular/material/core';
 // import { TodoModule } from './todo/todo.module';
  
 
@@ -78,6 +80,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatNativeDateModule,
+    MaterialExampleModule,
     StoreModule.forRoot({}),
     //have to create AppEffects
     EffectsModule.forRoot([AppEffects]),
