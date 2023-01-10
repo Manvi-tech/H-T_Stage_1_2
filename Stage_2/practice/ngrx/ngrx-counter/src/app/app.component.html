@@ -1,8 +1,23 @@
 
-<div class="contaner">
+<header>
+  <ul>
+    <li><a [routerLink]="['/']">Home</a></li>
+    <li><a [routerLink]="['counter']">Counter</a></li>
+    <li><a [routerLink]="['posts']">Posts</a></li>
+  </ul>
+</header>
+
+<div class="container">
+  
   <div class="row">
+    
     <div class="col-md-12">
-      <app-counter></app-counter>
+
+      <router-outlet></router-outlet>
+    
+      <!-- <app-counter></app-counter> -->
     </div>
+
   </div>
+
 </div>
